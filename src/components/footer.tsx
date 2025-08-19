@@ -2,18 +2,15 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="py-16 bg-black flex items-center justify-center">
+    <footer className="py-16 flex items-center justify-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-center space-y-8">
           {/* Logo */}
           <div className="relative flex items-center justify-center">
-            {/* Multiple neon glow layers */}
-            <div className="absolute inset-0 w-64 h-64 rounded-full bg-purple-500/20 blur-3xl animate-pulse"></div>
-            <div className="absolute inset-0 w-64 h-64 rounded-full bg-purple-400/30 blur-2xl"></div>
-            <div className="absolute inset-0 w-64 h-64 rounded-full bg-purple-300/20 blur-xl"></div>
+ 
             
             {/* Logo container */}
-            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-purple-400/50 shadow-2xl shadow-purple-500/50">
+            <div className="relative w-64 h-64 rounded-full overflow-hidden  ">
               {/* Logo image */}
               <div 
                 className="w-full h-full bg-cover bg-center bg-no-repeat"
@@ -21,15 +18,13 @@ export function Footer() {
                   backgroundImage: "url('/logo.png')"
                 }}
               >
-                {/* Inner neon glow */}
-                <div className="absolute inset-0 rounded-full shadow-inner shadow-purple-400/30"></div>
               </div>
             </div>
           </div>
 
           {/* Copyright text */}
           <div className="text-center">
-            <p className="text-white/80 font-montserrat text-sm">
+            <p className="text-black font-montserrat text-sm">
               Todos los derechos reservados. El Club RP ©
             </p>
           </div>
