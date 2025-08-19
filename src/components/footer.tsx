@@ -32,7 +32,7 @@ export function Footer() {
           {/* Social buttons */}
           <div className="flex space-x-4">
             <Link
-              href="https://discord.gg/your-discord-link" // Replace with your actual Discord link
+              href="https://discord.gg/cgzSFSn9av" // Replace with your actual Discord link
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-6 py-3 rounded-full font-montserrat font-semibold text-sm uppercase tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
