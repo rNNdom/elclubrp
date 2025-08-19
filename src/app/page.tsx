@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { HeroFooter } from "@/components/hero-footer";
 import { ImageCarousel } from "@/components/image-carousel";
 import { CircleNavSection } from "@/components/circle-nav-section";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <ImageCarousel />
         <CircleNavSection />
       </main>
+      <Footer />
     </div>
   );
 }
