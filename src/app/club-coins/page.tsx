@@ -31,8 +31,8 @@ export default function ClubCoins() {
             color: string
 
             constructor() {
-                this.x = Math.random() * canvas.width
-                this.y = Math.random() * canvas.height
+                this.x = Math.random() * canvas!.width
+                this.y = Math.random() * canvas!.height
                 this.vx = (Math.random() - 0.5) * 0.5
                 this.vy = (Math.random() - 0.5) * 0.5
                 this.size = Math.random() * 3 + 1
@@ -46,10 +46,10 @@ export default function ClubCoins() {
                 this.y += this.vy
 
                 // Wrap around edges
-                if (this.x < 0) this.x = canvas.width
-                if (this.x > canvas.width) this.x = 0
-                if (this.y < 0) this.y = canvas.height
-                if (this.y > canvas.height) this.y = 0
+                if (this.x < 0) this.x = canvas!.width
+                if (this.x > canvas!.width) this.x = 0
+                if (this.y < 0) this.y = canvas!.height
+                if (this.y > canvas!.height) this.y = 0
 
                 // Fade in and out
                 this.opacity += (Math.random() - 0.5) * 0.02
@@ -57,15 +57,15 @@ export default function ClubCoins() {
             }
 
             draw() {
-                ctx.save()
-                ctx.globalAlpha = this.opacity
-                ctx.fillStyle = this.color
-                ctx.shadowBlur = 15
-                ctx.shadowColor = this.color
-                ctx.beginPath()
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
-                ctx.fill()
-                ctx.restore()
+                ctx!.save()
+                ctx!.globalAlpha = this.opacity
+                ctx!.fillStyle = this.color
+                ctx!.shadowBlur = 15
+                ctx!.shadowColor = this.color
+                ctx!.beginPath()
+                ctx!.arc(this.x, this.y, this.size, 0, Math.PI * 2)
+                ctx!.fill()
+                ctx!.restore()
             }
         }
 
