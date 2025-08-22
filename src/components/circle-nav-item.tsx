@@ -18,7 +18,7 @@ export function CircleNavItem({ href, imageSrc, label, alt }: CircleNavItemProps
           }}
         >
           {/* Purple overlay */}
-          <div className="absolute inset-0 bg-purple-600/70 group-hover:bg-purple-600/60 transition-colors"></div>
+          <div className="absolute inset-0 group-hover:bg-purple-100/50 transition-colors"></div>
         </div>
       </div>
       

@@ -6,11 +6,10 @@ export function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-center space-y-8">
           {/* Logo */}
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex flex-col items-center justify-center space-y-3">
  
-            
             {/* Logo container */}
-            <div className="relative w-64 h-64 rounded-full overflow-hidden  ">
+            <div className="relative w-64 h-64 rounded-full overflow-hidden" style={{width: '150px', height: '150px' }}>
               {/* Logo image */}
               <div 
                 className="w-full h-full bg-cover bg-center bg-no-repeat"
@@ -20,14 +19,12 @@ export function Footer() {
               >
               </div>
             </div>
-          </div>
-
-          {/* Copyright text */}
-          <div className="text-center">
-            <p className="text-black font-montserrat text-sm">
+            {/* Copyright text under the logo */}
+            <p className="text-black font-montserrat text-sm text-center">
               Todos los derechos reservados. El Club RP ©
             </p>
           </div>
+
 
           {/* Social buttons */}
           <div className="flex space-x-6">

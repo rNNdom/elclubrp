@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -10,7 +11,7 @@ export function Hero() {
           <div 
             className="w-full h-full rounded-3xl relative bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url('/hero.jpg')"
+              backgroundImage: "url('/hero.jpg')",
             }}
           >
             {/* Dark overlay for better text readability */}
@@ -28,13 +29,14 @@ export function Hero() {
         <p className="text-lg md:text-xl mb-8 leading-relaxed max-w-3xl mx-auto font-montserrat">
           Este servidor está pensado para quienes disfrutan del rol y quieren vivir experiencias inmersivas dentro de un ambiente organizado y entretenido. El server cuenta con un estilo de rol serio, lo que significa que buscamos un equilibrio entre la diversión y la coherencia en la interpretación de los personajes.
         </p>
-        
+        <Link href="https://discord.gg/cgzSFSn9av" target="_blank">       
         <Button 
           size="lg" 
           className="bg-white hover:bg-gray-100 text-black px-8 py-3 text-lg rounded-full transition-colors font-montserrat font-semibold"
         >
           Quiero ser parte
-        </Button>
+        </Button> 
+      </Link>
       </div>
     </div>
   );

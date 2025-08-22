@@ -35,7 +35,7 @@ export function CircleNavSection() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" style={{marginTop: '100px'}}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center items-start gap-8 md:gap-12 lg:gap-16">
           {navItems.map((item, index) => (
