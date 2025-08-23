@@ -1,19 +1,17 @@
-import { Navbar } from "@/components/navbar";
-import { Hero } from "@/components/hero";
-import { HeroFooter } from "@/components/hero-footer";
-import { ImageCarousel } from "@/components/image-carousel";
-import { CircleNavSection } from "@/components/circle-nav-section";
-import { Footer } from "@/components/footer";
+import { CircleNavSection } from "@/components/circle-nav-section"
+import { Hero } from "@/components/hero"
+import { HeroFooter } from "@/components/hero-footer"
+import { ImageCarousel } from "@/components/image-carousel"
+import { Separator } from "@/components/separator"
 
 export default function Home() {
   return (
-    <div className="container mx-auto min-h-screen bg-white">
-        <Hero />
-        <HeroFooter />
-        
-        <ImageCarousel />
-        <CircleNavSection />
-
+    <div className='mx-auto min-h-screen bg-white font-montserrat'>
+      <Hero />
+      <HeroFooter />
+      <Separator className='bg-gradient-to-r from-orange-500 to-purple-700' />
+      <ImageCarousel />
+      <CircleNavSection />
     </div>
-  );
+  )
 }
