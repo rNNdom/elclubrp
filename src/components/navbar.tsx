@@ -12,7 +12,8 @@ enum navBarItems {
 }
 export function Navbar() {
   const [isSelected, setIsSelected] = useState<navBarItems | null>(null)
-  const selectedStyle = "text-white hover:text-gray-200 px-3 py-2 text-sm font-semibold border-b-2 border-t-2 border-white font-montserrat uppercase tracking-wide rounded-full bg-purple-700/30"
+  const selectedStyle =
+    "text-white hover:text-gray-200 px-3 py-2 text-sm font-semibold border-b-2 border-t-2 border-white font-montserrat uppercase tracking-wide rounded-full bg-purple-700/30 transition duration-200"
   const unselectedStyle = "text-white hover:text-gray-200 px-3 py-2 text-sm font-medium font-montserrat uppercase tracking-wide "
   return (
     <nav className='fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-orange-500 to-purple-600 shadow-lg'>
