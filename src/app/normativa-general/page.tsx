@@ -221,7 +221,7 @@ export default function NormativaGeneral() {
                           title='Fuerzas del orden (Policía, Sheriff, FBI, SWAT)'
                           description='Tratar con otro jugador para llegar a un acuerdo, ya sea en comercio, conflictos o alianzas entre facciones.'
                           items={[
-                            "Responsables de la seguridad pública, investigaciones criminales y aplicación de la ley",
+                            "Responsables de la seguridad pública, investigaciones criminales y aplicación de la ley.",
                             "Deben coordinar con EMS y Bomberos en situaciones de emergencias, tiroteos o accidentes.",
                             "El FBI solo intervendrá en casos de alta complejidad que requieran una investigación federal."
                           ]}
@@ -287,6 +287,12 @@ export default function NormativaGeneral() {
                         modo, en las organizaciones delictuales (OD), el rol de interpretación implica actuar de manera acorde al mundo criminal, evitando actitudes exageradas o irreales, como atacar
                         sin planificación, cometer delitos sin discreción o actuar como si fueran invencibles.
                       </HeaderContent>
+                      <Content title='Uso de moduladores de voz' id='Uso de moduladores de voz' spaced>
+                        Uso de moduladores de voz En nuestro servidor está permitido y respaldado el uso de moduladores de voz para aquellas personas que decidan rolear un personaje de sexo opuesto.
+                        No se tolerará bajo ninguna circunstancia el acoso, burla o discriminación hacia los jugadores que hagan uso de estas herramientas. Cualquier actitud negativa de este tipo será
+                        considerada una falta grave y conllevará sanciones estrictas. Queremos dejar en claro que en esta comunidad no se promueve la homofobia, la transfobia ni ningún tipo de
+                        discriminación. El respeto mutuo es un pilar fundamental para el correcto desarrollo del rol y la sana convivencia entre todos los jugadores.
+                      </Content>
                     </SubSectionContent>
                     <SubSectionContent reference='Nombre del Personaje'>
                       <HeaderContent title='1.1.1 Nombre del Personaje' id='1.1.1'>
@@ -703,7 +709,7 @@ const Content = ({ title, children, id, spaced }: { title: string; children: Rea
   return (
     <div id={id} className={`mb-8 ${spaced && "pl-10"}`}>
       <h3 className={`text-xl font-bold mb-4 text-purple-600 `}>{title}</h3>
-      <div className={`grid gap-4`}>{children}</div>
+      <div className={`grid gap-4 text-justify`}>{children}</div>
     </div>
   )
 }
