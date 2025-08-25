@@ -653,7 +653,7 @@ export default function NormativaGeneral() {
                     <SubSectionContent reference='Cryreport'>
                       <HeaderContent title='3.7 Cryreport' id='3.7'>
                         Se considera Cryreport cuando un jugador realiza reportes constantes y sin fundamentos válidos, con el único propósito de quejarse sin razones justificadas o para perjudicar a
-                        otros jugadores. .
+                        otros jugadores.
                       </HeaderContent>
                     </SubSectionContent>
                   </SectionContent>
