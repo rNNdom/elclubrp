@@ -25,7 +25,9 @@ export function HeroFooter({ className }: HeroFooterProps) {
             </span>
             , queda en{" "}
             <span className='relative inline-block'>
-              <span className='bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent'>EL CLUB</span>
+              <span className='bg-gradient-to-r  from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent'>
+                <b>EL CLUB</b>
+              </span>
               <span className='absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-gray-700 to-gray-900'></span>
             </span>
             .

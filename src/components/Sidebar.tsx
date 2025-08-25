@@ -24,7 +24,7 @@ export default function Sidebar({ isSidebarOpen, navigationSections, toggleSecti
   return (
     <div
       className={cn(
-        "sticky top-32 h-[calc(100vh-5rem)] w-80 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-300 ease-in-out z-30",
+        "sticky top-37 h-[calc(100vh-5rem)] w-80 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-300 ease-in-out z-30",
         isSidebarOpen ? "opacity-100" : " w-0.5 opacity-0"
       )}
     >

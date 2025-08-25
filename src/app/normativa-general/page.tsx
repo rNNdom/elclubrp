@@ -87,7 +87,7 @@ export default function NormativaGeneral() {
     const el = document.getElementById(id)
     if (el) {
       // Navbar height
-      const headerOffset = 150
+      const headerOffset = 160
       const elementPosition = el.getBoundingClientRect().top
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
@@ -129,11 +129,20 @@ export default function NormativaGeneral() {
       <div className='sticky top-15 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm'>
         <div className='container mx-auto px-4 py-3'>
           <div className='flex items-center justify-between'>
-            <div className='flex items-center gap-4'>
-              <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className=' p-2 rounded-lg hover:bg-gray-100 transition-colors' aria-label='Toggle navigation'>
-                {isSidebarOpen ? <XIcon className='w-5 h-5 text-gray-600' /> : <MenuIcon className='w-5 h-5 text-gray-600' />}
+            <div className='flex items-center w-full'>
+              <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className=' p-2 rounded-full transition-colors bg-purple-600 hover:bg-gray-300 cursor-pointer ' aria-label='Toggle navigation'>
+                {isSidebarOpen ? <XIcon className='w-5 h-5 text-white' /> : <MenuIcon className='w-5 h-5 text-white' />}
               </button>
-              <div className='text-lg font-semibold text-gray-800'>📖 Normativa General</div>
+
+              <div className='border-b-2 border-purple-600 w-full'></div>
+              <div className='w-full flex justify-start'>
+                <div className='bg-gray-200 p-4 rounded-lg'>
+                  <p className='text-2xl text-orange-400 uppercase '>
+                    <b className='text-purple-600 '>Normativa</b> General
+                  </p>
+                </div>
+              </div>
+              <div className='w-1/3'></div>
             </div>
             <div className='flex gap-3'>
               <a
@@ -144,9 +153,13 @@ export default function NormativaGeneral() {
               >
                 Discord
               </a>
-              <button className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all text-sm'>
+              <a
+                href='https://discord.gg/cgzSFSn9av'
+                target='_blank'
+                className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all text-sm'
+              >
                 TikTok
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -723,7 +736,13 @@ const ListItemContent = ({ title, description, items }: { title?: string; descri
         <ul className='list-disc list-inside text-gray-700 pl-4 mt-2 space-y-2'>
           {items.map((item, index) => (
             <li className='text-gray-700' key={index}>
-              <span className='font-bold'>{item.split(":")[0]}:</span> <span>{item.split(":")[1]}</span>
+              {item.includes(":") ? (
+                <>
+                  <span className='font-bold'>{item.split(":")[0]}:</span> <span>{item.split(":")[1]}</span>
+                </>
+              ) : (
+                <span>{item}</span>
+              )}
             </li>
           ))}
         </ul>

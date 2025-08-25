@@ -8,8 +8,9 @@ export default function Home() {
   return (
     <div className='mx-auto min-h-screen bg-white font-montserrat'>
       <Hero />
+
       <HeroFooter />
-      <Separator className='bg-gradient-to-r from-orange-500 to-purple-700' />
+      <Separator className='bg-gradient-to-r from-orange-500 to-purple-700 mt-0 mb-0' />
       <ImageCarousel />
       <CircleNavSection />
     </div>
