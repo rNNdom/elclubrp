@@ -1,138 +1,310 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
+import Sidebar from "@/components/Sidebar"
+import { CircleCheckIcon, InfoIcon, MenuIcon, XIcon, StarIcon, GiftIcon, ClockIcon, ShoppingBagIcon, CrownIcon, ZapIcon } from "lucide-react"
+import { useState } from "react"
 
-export default function NormativaDelictual() {
-    const [selectedOption, setSelectedOption] = useState(2)
-    const [isIndexOpen, setIsIndexOpen] = useState(false)
+export default function ClubCoins() {
+  const [selectedOption, setSelectedOption] = useState(0)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(["general"]))
 
-    const indexItems = [
-        { id: 'que-es', label: '¿Qué es Lorem Ipsum?' },
-        { id: 'por-que', label: '¿Por qué lo usamos?' },
-        { id: 'origen', label: '¿De dónde viene?' },
-    ]
-
-    const handleGoTo = (id: string, idx: number) => {
-        const el = document.getElementById(id)
-        if (el) {
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
-        setSelectedOption(idx + 1)
-        setIsIndexOpen(false)
+  // Main navigation structure
+  const navigationSections = [
+    {
+      id: "club-coins",
+      title: "Club Coins",
+      icon: "🌟",
+      items: [
+        { id: "que-son", label: "¿Qué son las Club Coins?", level: 0 },
+        { id: "como-conseguir", label: "¿Cómo se consiguen?", level: 0 },
+        { id: "como-consultar", label: "¿Cómo consulto mis coins?", level: 0 },
+        { id: "para-que-sirven", label: "¿Para qué sirven?", level: 0 },
+        { id: "acceso-vip", label: "Acceso VIP", level: 0 }
+      ]
     }
+  ]
 
-    return (
-      <div className='min-h-screen bg-white mx-auto container'>
-        {/* Header Section */}
-        <div
-          className='relative h-96 flex items-center justify-center bg-gray-200'
-          style={{ borderRadius: "20px", backgroundImage: "url(/banner.png)", backgroundSize: "cover", backgroundPosition: "center", margin: "20px" }}
-        >
-          <div className='relative z-10 flex items-center justify-center h-full'></div>
+  const handleGoTo = (id: string, itemIdx: number) => {
+    const el = document.getElementById(id)
+    if (el) {
+      // Navbar height
+      const headerOffset = 160
+      const elementPosition = el.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      })
+    }
+    setSelectedOption(itemIdx)
+  }
+
+  const toggleSection = (sectionId: string) => {
+    const newExpanded = new Set(expandedSections)
+    if (newExpanded.has(sectionId)) {
+      newExpanded.delete(sectionId)
+    } else {
+      newExpanded.add(sectionId)
+    }
+    setExpandedSections(newExpanded)
+  }
+
+  return (
+    <div className='min-h-screen bg-gray-50' style={{ fontFamily: "Montserrat" }}>
+      {/* Header Banner */}
+      <div className='relative h-80 md:h-96'>
+        <div className='absolute inset-0 bg-cover bg-center bg-no-repeat' style={{ backgroundImage: "url(/banner.png)" }} />
+        <div className='absolute inset-0 bg-black/50' />
+        <div className='relative z-10 flex items-center justify-center h-full'>
+          <div className='text-center text-white px-4'>
+            <h1 className='text-3xl md:text-5xl font-bold mb-4'>
+              <span className='text-purple-300'>CLUB</span> <span className='text-orange-300'>COINS</span>
+            </h1>
+            <p className='text-lg md:text-xl opacity-100 max-w-2xl mx-auto'>La moneda especial de nuestro servidor para premiar tu tiempo en ciudad</p>
+          </div>
         </div>
+      </div>
 
-        {/* Navigation Bar overlay to match design */}
-        <div className='relative -mt-8 px-6 z-20' style={{ marginTop: "2px" }}>
-          <div className='relative flex items-center'>
-            <div className='relative flex items-center w-full gap-4'>
-              <div className='relative' onMouseLeave={() => setIsIndexOpen(false)}>
-                <button
-                  type='button'
-                  aria-haspopup='menu'
-                  style={{ fontFamily: "Montserrat" }}
-                  aria-expanded={isIndexOpen}
-                  className='w-6 h-6 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 shadow-lg shadow-purple-500/30 focus:outline-none focus:ring-2 focus:ring-purple-500'
-                  onClick={() => setIsIndexOpen((v) => !v)}
-                  title='Índice'
-                />
-                {isIndexOpen && (
-                  <div role='menu' className='absolute left-0 mt-2 w-64 rounded-lg border border-purple-200 bg-white/95 backdrop-blur p-2 shadow-xl'>
-                    {indexItems.map((item, idx) => (
-                      <button
-                        key={item.id}
-                        type='button'
-                        role='menuitem'
-                        className='block w-full text-left px-3 py-2 rounded-md text-sm text-gray-800 hover:bg-purple-50'
-                        onClick={() => handleGoTo(item.id, idx)}
-                      >
-                        {item.label}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-              <div className='h-0.5 w-[650px] bg-gradient-to-r from-blue-500 via-purple-500 to-purple-700 rounded-full' />
-              <div className='absolute left-1/2 -translate-x-1/2 bg-gray-200 rounded-2xl px-8 py-4 shadow-md' style={{ fontFamily: "Montserrat" }}>
-                <h1 className='text-2xl text-center'>
-                  <span className='text-purple-600 font-bold'>Club</span> <span className='text-orange-600 italic font-normal'>Coins</span>
-                </h1>
-              </div>
+      {/* Sticky Navigation Header */}
+      <div className='sticky top-15 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm'>
+        <div className='container mx-auto px-4 py-3'>
+          <div className='flex items-center justify-between'>
+            <div className='flex items-center w-full'>
+              <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className=' p-2 rounded-full transition-colors bg-purple-600 hover:bg-gray-300 cursor-pointer ' aria-label='Toggle navigation'>
+                {isSidebarOpen ? <XIcon className='w-5 h-5 text-white' /> : <MenuIcon className='w-5 h-5 text-white' />}
+              </button>
 
-              <div className='ml-auto flex gap-3'>
-                <button className='bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition-colors' style={{ fontFamily: "Montserrat" }}>
-                  Discord
-                </button>
-                <button className='bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition-colors' style={{ fontFamily: "Montserrat" }}>
-                  TikTok
-                </button>
+              <div className='border-b-2 border-purple-600 w-full'></div>
+              <div className='w-full flex justify-start'>
+                <div className='bg-gray-200 p-4 rounded-lg'>
+                  <p className='text-2xl text-orange-400 uppercase '>
+                    <b className='text-purple-600 '>Club</b> Coins
+                  </p>
+                </div>
               </div>
+            </div>
+            <div className='flex gap-3'>
+              <a
+                href='https://discord.gg/cgzSFSn9av'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='bg-purple-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-purple-700 transition-colors text-sm'
+              >
+                Discord
+              </a>
+              <a
+                href='https://discord.gg/cgzSFSn9av'
+                target='_blank'
+                className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all text-sm'
+              >
+                TikTok
+              </a>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Content Section */}
-        <div className='flex gap-8 p-8' style={{ fontFamily: "Montserrat" }}>
+      <div className='container mx-auto px-4 py-6'>
+        <div className='flex gap-8'>
+          {/* Sidebar Navigation */}
+          <Sidebar
+            isSidebarOpen={isSidebarOpen}
+            navigationSections={navigationSections}
+            toggleSection={toggleSection}
+            expandedSections={expandedSections}
+            selectedOption={selectedOption}
+            handleItemClick={handleGoTo}
+          />
+
           {/* Main Content */}
-          <div className='flex-1 space-y-6'>
-            <div id='que-es'>
-              <h2 className='text-xl font-bold mb-3'>¿Qué es Lorem Ipsum?</h2>
-              <p className='text-gray-800 leading-relaxed'>
-                Lorem Ipsum es simplemente texto de relleno de la industria de la impresión y la composición tipográfica. Lorem Ipsum ha sido el texto de relleno estándar de la industria desde el año
-                1500, cuando un impresor desconocido tomó una galera de tipos y la mezcló para hacer un libro de muestras tipográficas.
-              </p>
-            </div>
-
-            <div id='por-que'>
-              <h2 className='text-xl font-bold mb-3'>¿Por qué lo usamos?</h2>
-              <p className='text-gray-800 leading-relaxed'>
-                Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página cuando mire su diseño. El punto de usar Lorem Ipsum es que tiene una
-                distribución más o menos normal de las letras, al contrario de usar texto como "Contenido aquí, contenido aquí".
-              </p>
-            </div>
-
-            <div id='origen'>
-              <h2 className='text-xl font-bold mb-3'>¿De dónde viene?</h2>
-              <p className='text-gray-800 leading-relaxed'>
-                Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raíces en una pieza de la literatura latina clásica del año 45 antes de
-                Cristo, haciendo que este texto tenga más de 2000 años de antigüedad.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Sidebar */}
-          <div className='w-64'>
-            <div className='border border-gray-300 rounded-lg p-4 bg-white'>
-              <div className='space-y-2'>
-                {indexItems.map((item, idx) => (
-                  <div
-                    key={item.id}
-                    className={`flex items-center justify-between p-2 rounded cursor-pointer transition-colors ${
-                      selectedOption === idx + 1 ? "bg-purple-100 border border-purple-300" : "hover:bg-gray-50"
-                    }`}
-                    onClick={() => handleGoTo(item.id, idx)}
-                  >
-                    <span className='text-gray-700'>{item.label}</span>
-                    {selectedOption === idx + 1 && (
-                      <svg className='w-4 h-4 text-purple-600' fill='currentColor' viewBox='0 0 20 20'>
-                        <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
-                      </svg>
-                    )}
+          <div className={`flex-1`}>
+            <div className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
+              <div className='prose prose-lg max-w-none'>
+                {/* Content sections */}
+                <div>
+                  <h2 className='text-2xl font-bold mb-6 flex items-center gap-3' id='que-son'>
+                    <span>¿Qué son las Club Coins?</span>
+                  </h2>
+                  <div className='bg-blue-50 border-l-4 border-blue-400 p-4 mb-6'>
+                    <p className='text-gray-800 leading-relaxed'>
+                      Las Club Coins son la moneda especial de nuestro servidor, pensada para premiar tu tiempo en ciudad y darte acceso a beneficios exclusivos.
+                    </p>
                   </div>
-                ))}
+                </div>
+
+                <div className='grid gap-4'>
+                  <SectionContent reference='¿Cómo se consiguen?'>
+                    <SubSectionContent reference='¿Cómo se consiguen?'>
+                      <HeaderContent title='¿Cómo se consiguen?' id='como-conseguir'>
+                        Existen varias formas de obtener Club Coins en nuestro servidor. Cada método está diseñado para recompensar diferentes aspectos de tu participación en la comunidad.
+                      </HeaderContent>
+
+                      <Content title='Métodos de obtención:' id='metodos-obtencion' spaced>
+                        <ListItemContent title='Tiempo en ciudad' description='Por cada hora de juego recibes automáticamente Club Coins.' icon={<ClockIcon className='w-5 h-5 text-blue-600' />} />
+                        <ListItemContent
+                          title='Recompensa diaria'
+                          description='Con el comando /regalito podrás reclamar una cantidad de coins todos los días.'
+                          icon={<GiftIcon className='w-5 h-5 text-green-600' />}
+                        />
+                        <ListItemContent
+                          title='Donaciones'
+                          description='También puedes obtener Club Coins a través de nuestro sistema de apoyo/donaciones.'
+                          icon={<StarIcon className='w-5 h-5 text-yellow-600' />}
+                        />
+                        <ListItemContent title='Eventos y concursos' description='En actividades especiales se entregarán coins como premios.' icon={<ZapIcon className='w-5 h-5 text-purple-600' />} />
+                      </Content>
+                    </SubSectionContent>
+                  </SectionContent>
+
+                  <SectionContent reference='¿Cómo consulto mis coins?'>
+                    <SubSectionContent reference='¿Cómo consulto mis coins?'>
+                      <HeaderContent title='¿Cómo consulto mis coins?' id='como-consultar'>
+                        Usa el comando <code className='bg-gray-100 px-2 py-1 rounded text-purple-600 font-mono'>/club</code> en cualquier momento y el sistema te mostrará cuántas Club Coins tienes
+                        acumuladas.
+                      </HeaderContent>
+                    </SubSectionContent>
+                  </SectionContent>
+
+                  <SectionContent reference='¿Para qué sirven?'>
+                    <SubSectionContent reference='¿Para qué sirven?'>
+                      <HeaderContent title='¿Para qué sirven?' id='para-que-sirven'>
+                        Las Club Coins se utilizan en una tienda exclusiva, que abre una vez a la semana para todos los jugadores. Allí podrás encontrar productos y servicios únicos que no están
+                        disponibles en el juego normal.
+                      </HeaderContent>
+
+                      <Content title='Productos disponibles en la tienda:' id='productos-tienda' spaced>
+                        <ListItemContent title='Objetos VIP' description='Accesorios y objetos exclusivos para personalizar tu experiencia.' icon={<CrownIcon className='w-5 h-5 text-yellow-600' />} />
+                        <ListItemContent
+                          title='Vehículos especiales'
+                          description='Coches únicos y modificados que no se encuentran en el juego base.'
+                          icon={<ShoppingBagIcon className='w-5 h-5 text-blue-600' />}
+                        />
+                        <ListItemContent title='Cupones de descuento' description='Descuentos en modificaciones y tuneo de vehículos.' icon={<CircleCheckIcon className='w-5 h-5 text-green-600' />} />
+                        <ListItemContent
+                          title='Cupones para cambio de motor'
+                          description='Permisos especiales para cambiar el motor de tu vehículo.'
+                          icon={<CircleCheckIcon className='w-5 h-5 text-orange-600' />}
+                        />
+                        <ListItemContent title='Otras sorpresas exclusivas' description='Contenido especial que se renueva regularmente.' icon={<StarIcon className='w-5 h-5 text-purple-600' />} />
+                      </Content>
+                    </SubSectionContent>
+                  </SectionContent>
+
+                  <SectionContent reference='Acceso VIP'>
+                    <SubSectionContent reference='Acceso VIP'>
+                      <HeaderContent title='Acceso VIP' id='acceso-vip'>
+                        Si cuentas con un paquete VIP, recibirás una tarjeta de acceso que te permitirá entrar a la tienda en cualquier momento, sin esperar la apertura semanal.
+                      </HeaderContent>
+                      <ContentFooter>
+                        <div className='flex items-center gap-2 mb-2'>
+                          <CrownIcon className='w-6 h-6 text-yellow-600' />
+                          <span className='font-bold text-yellow-600'>Beneficio VIP:</span>
+                        </div>
+                        Los jugadores VIP tienen acceso prioritario y exclusivo a la tienda de Club Coins, permitiéndoles comprar en cualquier momento sin restricciones de horario.
+                      </ContentFooter>
+                    </SubSectionContent>
+                  </SectionContent>
+
+                  {/* Call to Action */}
+                  <div className='bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-6 mt-8'>
+                    <div className='flex items-center gap-3 mb-4'>
+                      <ZapIcon className='w-8 h-8 text-purple-600' />
+                      <h3 className='text-xl font-bold text-purple-700'>¡Acumula tus Club Coins!</h3>
+                    </div>
+                    <p className='text-gray-800 leading-relaxed'>
+                      Disfruta de ventajas únicas en la ciudad. Cuanto más tiempo pases jugando y participando en eventos, más Club Coins podrás acumular para acceder a contenido exclusivo.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    )
+    </div>
+  )
+}
+
+const SectionContent = ({ children, reference }: { children: React.ReactNode; reference?: string }) => {
+  return (
+    <div className='p-4 bg-white rounded-lg gap-4 flex flex-col' data-reference={reference}>
+      {children}
+    </div>
+  )
+}
+
+const SubSectionContent = ({ children, reference }: { children: React.ReactNode; reference?: string }) => {
+  return (
+    <div className={`border-b-1 border-gray-200`} data-reference={reference}>
+      {children}
+    </div>
+  )
+}
+
+const HeaderContent = ({ title, children, id }: { title: string; children: React.ReactNode; id: string }) => {
+  return (
+    <div id={id} className='mb-8'>
+      <h2 className='text-2xl font-bold mb-4 text-purple-700'>{title}</h2>
+      <div className='bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-6 mb-4'>
+        <p className='text-gray-800 leading-relaxed text-justify'>{children}</p>
+      </div>
+    </div>
+  )
+}
+
+const Content = ({ title, children, id, spaced }: { title: string; children: React.ReactNode; id: string; spaced?: boolean }) => {
+  return (
+    <div id={id} className={`mb-8 ${spaced && "pl-10"}`}>
+      <h3 className={`text-xl font-bold mb-4 text-purple-600 `}>{title}</h3>
+      <div className={`grid gap-4`}>{children}</div>
+    </div>
+  )
+}
+
+const ListItemContent = ({ title, description, items, icon }: { title?: string; description?: string; items?: string[]; icon?: React.ReactNode }) => {
+  return (
+    <div className='bg-white border border-purple-200 rounded-lg p-4'>
+      {title && (
+        <div className='flex items-center gap-3 mb-2'>
+          {icon}
+          <h4 className='font-bold text-purple-600'>{title}</h4>
+        </div>
+      )}
+      {description && (
+        <label className='flex items-center gap-4'>
+          <span>
+            <CircleCheckIcon className='w-4 h-4 text-purple-600' />
+          </span>
+          <p className='text-gray-700'>{description}</p>
+        </label>
+      )}
+      {items && (
+        <ul className='list-disc list-inside text-gray-700 pl-4 mt-2 space-y-2'>
+          {items.map((item, index) => (
+            <li className='text-gray-700' key={index}>
+              {item.includes(":") ? (
+                <>
+                  <span className='font-bold'>{item.split(":")[0]}:</span> <span>{item.split(":")[1]}</span>
+                </>
+              ) : (
+                <span>{item}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
+
+const ContentFooter = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className='bg-slate-100 rounded-lg p-6 mb-4'>
+      <label className='flex items-center gap-2 flex-col'>
+        <p className='text-gray-800 leading-relaxed'>{children}</p>
+      </label>
+    </div>
+  )
 }
