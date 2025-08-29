@@ -7,7 +7,7 @@ import { useState } from "react"
 export default function ClubCoins() {
   const [selectedOption, setSelectedOption] = useState(0)
   const [isSidebarOpen, setIsSidebarOpen] = useState(true)
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(["general"]))
+  const [expandedSection, setExpandedSection] = useState<string | null>(null)
 
   // Main navigation structure
   const navigationSections = [
@@ -42,13 +42,11 @@ export default function ClubCoins() {
   }
 
   const toggleSection = (sectionId: string) => {
-    const newExpanded = new Set(expandedSections)
-    if (newExpanded.has(sectionId)) {
-      newExpanded.delete(sectionId)
+    if (expandedSection === sectionId) {
+      setExpandedSection(null)
     } else {
-      newExpanded.add(sectionId)
+      setExpandedSection(sectionId)
     }
-    setExpandedSections(newExpanded)
   }
 
   return (
@@ -113,7 +111,7 @@ export default function ClubCoins() {
             isSidebarOpen={isSidebarOpen}
             navigationSections={navigationSections}
             toggleSection={toggleSection}
-            expandedSections={expandedSections}
+            expandedSection={expandedSection}
             selectedOption={selectedOption}
             handleItemClick={handleGoTo}
           />
