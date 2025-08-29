@@ -1,7 +1,7 @@
 "use client"
 
 import Sidebar from "@/components/Sidebar"
-import { CircleCheckIcon, InfoIcon, MenuIcon, XIcon, StarIcon, GiftIcon, ClockIcon, ShoppingBagIcon, CrownIcon, ZapIcon } from "lucide-react"
+import { CircleCheckIcon, ClockIcon, CrownIcon, GiftIcon, MenuIcon, ShoppingBagIcon, StarIcon, XIcon, ZapIcon } from "lucide-react"
 import { useState } from "react"
 
 export default function ClubCoins() {

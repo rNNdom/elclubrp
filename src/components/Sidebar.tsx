@@ -15,12 +15,14 @@ interface SidebarProps {
     }[]
   }[]
   toggleSection: (id: string) => void
-  expandedSections: Set<string>
+  expandedSection: string | null
   selectedOption: number
   handleItemClick: (id: string, itemIdx: number) => void
+  setSelectedSection?: (section: string) => void
 }
 
-export default function Sidebar({ isSidebarOpen, navigationSections, toggleSection, expandedSections, selectedOption, handleItemClick }: SidebarProps) {
+export default function Sidebar({ isSidebarOpen, navigationSections, toggleSection, expandedSection, selectedOption, handleItemClick, setSelectedSection }: SidebarProps) {
+  console.log(expandedSection)
   return (
     <div
       className={cn(
@@ -37,17 +39,23 @@ export default function Sidebar({ isSidebarOpen, navigationSections, toggleSecti
           {navigationSections.map((section) => {
             return (
               <div key={section.id} className='border-b border-gray-100 last:border-b-0'>
-                <button onClick={() => toggleSection(section.id)} className='w-full p-4 text-left hover:bg-gray-50 transition-colors flex items-center justify-between group'>
+                <button
+                  onClick={() => {
+                    toggleSection(section.id)
+                    setSelectedSection && setSelectedSection(section.id)
+                  }}
+                  className='w-full p-4 text-left hover:bg-gray-50 transition-colors flex items-center justify-between group'
+                >
                   <div className='flex items-center gap-3'>
                     <span className='text-lg'>{section.icon}</span>
                     <span className='font-semibold text-gray-800 group-hover:text-purple-600'>{section.title}</span>
                   </div>
-                  <div className={`transition-transform duration-200 ${expandedSections.has(section.id) ? "rotate-0" : "-rotate-90"}`}>
+                  <div className={`transition-transform duration-200 ${expandedSection === section.id ? "rotate-0" : "-rotate-90"}`}>
                     <ChevronDownIcon className='w-4 h-4 text-gray-500' />
                   </div>
                 </button>
 
-                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedSections.has(section.id) ? " opacity-100" : "max-h-0 opacity-0"}`}>
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedSection === section.id ? " opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className='pb-2'>
                     {section.items.map((item, itemIdx) => (
                       <button
