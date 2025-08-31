@@ -71,19 +71,46 @@ export default function NormativaGeneral() {
       id: "normativas-generales",
       title: "Normativas Generales",
       icon: "🔍",
-      items: [{ id: "coming-soon-1", label: "Próximamente...", level: 0 }]
+      items: [
+        { id: "1.", label: "1. Respeto y Cortesía", level: 0 },
+        { id: "2.", label: "2. Resolución de Desacuerdos", level: 0 },
+        { id: "3.", label: "3. Uso de los Canales de Chat ", level: 0 },
+        { id: "4.", label: "4. Prohibición de Explotación de Errores o Trucos", level: 0 },
+        { id: "5.", label: "5. Juego Justo", level: 0 },
+        { id: "6.", label: "6. Personajes y Comportamiento", level: 0 },
+        { id: "7.", label: "7. Interpretación del Rol", level: 0 },
+        { id: "mod", label: "Uso de moduladores de voz", level: 0 },
+        { id: "8.", label: "8. Protección de Información Personal", level: 0 },
+        { id: "9.", label: "9. Cumplimiento de las Reglas", level: 0 },
+        { id: "10.", label: "10. Eventos del Servidor", level: 0 },
+        { id: "11.", label: "11. Normas para Administradores", level: 0 },
+        { id: "12.", label: "12. Resolución de Disputas", level: 0 },
+        { id: "13.", label: "13. Actualizaciones y Mantenimiento", level: 0 },
+        { id: "14.", label: "14. Prohibición de Abandonar el Juego mediante F8 + Quit", level: 0 },
+        { id: "15.", label: "15. Sanciones", level: 0 },
+        { id: "16.", label: "16. Prohibición de Ataques a Propiedades sin Rol Previo", level: 0 },
+        { id: "17.", label: "17. Límite de Velocidad en Ciudad y Actos Delictuales", level: 0 },
+        { id: "18.", label: "Control y Fiscalización ", level: 0 },
+        { id: "19.", label: "Reglas en Actos Delictuales ", level: 0 },
+        { id: "20.", label: "En Situaciones De Tiroteo", level: 0 }
+
+      ]
     },
     {
       id: "clips-evidencias",
       title: "Clips y Evidencias",
       icon: "🎥",
-      items: [{ id: "coming-soon-2", label: "Próximamente...", level: 0 }]
+      items: [{ id: "Clips", label: "Clips/Evidencia", level: 0 }]
     },
     {
       id: "sanciones",
       title: "Sanciones",
       icon: "🔨",
-      items: [{ id: "coming-soon-2", label: "Próximamente...", level: 0 }]
+      items: [
+        { id: "Sanciones", label: "Sanciones", level: 0 },
+        { id: "admin", label: "Sanciones Con Carcel", level: 0 },
+        { id: "baneo", label: "Sanciones Con Baneo", level: 0 }
+      ]
     }
   ]
 
@@ -146,7 +173,7 @@ export default function NormativaGeneral() {
               <div className='w-full flex justify-start'>
                 <div className='bg-gray-200 p-4 rounded-lg'>
                   <p className='text-2xl text-orange-400 uppercase '>
-                    <b className='text-purple-600 '>Normativa</b> General
+                    <b className='text-purple-600 '>Normativa</b> <span className="italic">General</span>
                   </p>
                 </div>
               </div>

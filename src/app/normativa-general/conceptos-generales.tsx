@@ -297,14 +297,6 @@ export default function ConceptosGenerales() {
             </HeaderContent>
             <Content title='Tipos de CK:' id='2.2.1' spaced>
               <ListItemContent
-                title='Policial'
-                description='Ocurre cuando una facción legal, como la policía, ejercito o FBI elimina a un personaje de manera definitiva tras un proceso de rol bien desarrollado. Esto suele suceder en casos donde un criminal ha acumulado múltiples delitos graves, exceso de multas sin pagar, entre otros y este ha sido condenado a pena de muerte o cadena perpetua.'
-              />
-              <ListItemContent
-                title='Delictual'
-                description='Se da cuando una organización criminal asesina de manera definitiva a un personaje que pertenece a una facción legal. Puede ocurrir si un policía, fiscal o juez se convierte en un objetivo prioritario debido a sus acciones contra la organización, y la facción criminal logra eliminarlo dentro de un rol justificado y bien estructurado.'
-              />
-              <ListItemContent
                 title='Voluntario'
                 description='Es cuando el propio jugador decide cerrar la historia de su personaje por razones personales o narrativas. Puede hacerlo mediante un rol bien desarrollado, como un asesinato, un accidente fatal o cualquier otro evento que justifique la muerte definitiva del personaje.'
               />
@@ -316,6 +308,9 @@ export default function ConceptosGenerales() {
             <ContentFooter>
               Cada tipo de CK debe ser justificado con un desarrollo de rol adecuado, asegurando que la muerte del personaje tenga sentido dentro de la historia. Todo CK deberá ser aprobado por la
               Administración previamente presentando todas las pruebas correspondientes.
+              <br />
+              <br />
+              Los otros tipos de CK esta redactados en respectivas normativas
             </ContentFooter>
           </SubSectionContent>
         </SectionContent>
