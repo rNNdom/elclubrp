@@ -90,17 +90,22 @@ export default function NormativaGeneral() {
         { id: "15.", label: "15. Sanciones", level: 0 },
         { id: "16.", label: "16. Prohibición de Ataques a Propiedades sin Rol Previo", level: 0 },
         { id: "17.", label: "17. Límite de Velocidad en Ciudad y Actos Delictuales", level: 0 },
-        { id: "18.", label: "Control y Fiscalización ", level: 0 },
-        { id: "19.", label: "Reglas en Actos Delictuales ", level: 0 },
-        { id: "20.", label: "En Situaciones De Tiroteo", level: 0 }
-
+        { id: "18.", label: "18. Control y Fiscalización ", level: 0 },
+        { id: "19.", label: "19. Reglas en Actos Delictuales ", level: 0 },
+        { id: "19.1.", label: "19.1 En Situaciones De Tiroteo", level: 1 }
       ]
     },
     {
       id: "clips-evidencias",
       title: "Clips y Evidencias",
       icon: "🎥",
-      items: [{ id: "Clips", label: "Clips/Evidencia", level: 0 }]
+      items: [
+        { id: "Clips-Evidencias", label: "Clips/Evidencia", level: 0 },
+        { id: "1", label: "1. Definición de Clips/Evidencias", level: 0 },
+        { id: "2", label: "2. Requisitos de los Clips", level: 0 },
+        { id: "3", label: "3. Consecuencias por Alteración", level: 0 },
+        { id: "4", label: "4. Proceso de Reporte", level: 0 }
+      ]
     },
     {
       id: "sanciones",
@@ -108,8 +113,10 @@ export default function NormativaGeneral() {
       icon: "🔨",
       items: [
         { id: "Sanciones", label: "Sanciones", level: 0 },
-        { id: "admin", label: "Sanciones Con Carcel", level: 0 },
-        { id: "baneo", label: "Sanciones Con Baneo", level: 0 }
+        { id: "1", label: "1. Normativa de Sanciones", level: 0 },
+        { id: "2", label: "2. Clasificación de Sanciones", level: 0 },
+        { id: "3", label: "3. Tabla de Infracciones y Sanciones", level: 0 },
+        { id: "4", label: "4. Notas Importantes", level: 0 }
       ]
     }
   ]
@@ -173,7 +180,7 @@ export default function NormativaGeneral() {
               <div className='w-full flex justify-start'>
                 <div className='bg-gray-200 p-4 rounded-lg'>
                   <p className='text-2xl text-orange-400 uppercase '>
-                    <b className='text-purple-600 '>Normativa</b> <span className="italic">General</span>
+                    <b className='text-purple-600 '>Normativa</b> <span className='italic'>General</span>
                   </p>
                 </div>
               </div>

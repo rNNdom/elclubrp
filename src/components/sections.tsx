@@ -64,13 +64,13 @@ export const ListItemContent = ({ title, description, items }: { title?: string;
   )
 }
 
-export const ContentFooter = ({ children }: { children: React.ReactNode }) => {
+export const ContentFooter = ({ children, name }: { children: React.ReactNode; name?: string }) => {
   return (
     <div className='bg-slate-100 rounded-lg p-6 mb-4'>
       <label className='flex items-center gap-2 flex-col'>
         <span className='flex items-center justify-start gap-2 w-full'>
           <InfoIcon className='w-5 h-5 text-blue-400' />
-          <p className='text-blue-400 font-bold'>Nota:</p>
+          <p className='text-blue-400 font-bold'>{name || "Nota:"}</p>
         </span>
         <p className='text-gray-800 leading-relaxed'>{children}</p>
       </label>
