@@ -30,7 +30,7 @@ export function Navbar() {
             <div className='hidden md:block'>
               <div className='ml-10 flex items-baseline space-x-4'>
                 <Link href='/club-coins' className={isSelected === navBarItems.clubCoins ? selectedStyle : unselectedStyle} onClick={() => setIsSelected(navBarItems.clubCoins)}>
-                  Club Coins
+                  Clubies
                 </Link>
                 <Link href='/normativa-general' className={isSelected === navBarItems.normativaGeneral ? selectedStyle : unselectedStyle} onClick={() => setIsSelected(navBarItems.normativaGeneral)}>
                   Normativa General

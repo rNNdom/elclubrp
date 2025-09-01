@@ -50,11 +50,11 @@ export default function ConceptosGenerales() {
               del roleo dentro del servidor.
             </HeaderContent>
             <Content title='Interacción entre facciones gubernamentales' id='Obligaciones y Coordinacion' spaced>
-              Las facciones gubernamentales, como la Policía, EMS, Bomberos, Sheriff, FBI y otras agencias estatales, deben trabajar en conjunto para garantizar un rol estructurado, realista y
-              dinámico dentro del servidor. Cada facción tiene un propósito específico, pero todas forman parte de un sistema interconectado, donde la colaboración es esencial para el desarrollo de
+              Las facciones gubernamentales, como la Policía y EMS, deben trabajar en conjunto para garantizar un rol estructurado, realista ydinámico dentro del servidor. 
+              Cada facción tiene un propósito específico, pero todas forman parte de un sistema interconectado, donde la colaboración es esencial para el desarrollo de
               escenas coherentes y fluidas.
               <ListItemContent
-                title='Fuerzas del orden (Policía, Sheriff, FBI, SWAT)'
+                title='Fuerzas del orden (Policía, SWAT)'
                 description='Tratar con otro jugador para llegar a un acuerdo, ya sea en comercio, conflictos o alianzas entre facciones.'
                 items={[
                   "Responsables de la seguridad pública, investigaciones criminales y aplicación de la ley",

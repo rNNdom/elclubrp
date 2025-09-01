@@ -187,10 +187,10 @@ function NormativasGenerales() {
               Las velocidades máximas permitidas varían según la zona para mantener el realismo y la seguridad en el roleplay.
             </HeaderContent>
             <Content title='Velocidades Permitidas:' id='Velocidades' spaced>
-              <ListItemContent title='Zona urbana central (rectángulo azul en el mapa)' description='Máximo 100 km/h (incluye comisaría, hospital, municipalidad y talleres mecánicos).' />
-              <ListItemContent title='Resto de la ciudad' description='Máximo 150 km/h.' />
-              <ListItemContent title='Carreteras principales (marcadas en amarillo en el mapa)' description='Máximo 250 km/h.' />
-              <ListItemContent title='Zonas urbanas en el norte (Paleto y Sandy Shores)' description='Máximo 150 km/h.' />
+              <ListItemContent title='Zona urbana central (rectángulo azul en el mapa)' description='Máximo 120 km/h (incluye comisaría, hospital, municipalidad y talleres mecánicos).' />
+              <ListItemContent title='Resto de la ciudad' description='Máximo 170 km/h.' />
+              <ListItemContent title='Carreteras principales (marcadas en amarillo en el mapa)' description='Máximo 300 km/h.' />
+              <ListItemContent title='Zonas urbanas en el norte (Paleto y Sandy Shores)' description='Máximo 180 km/h.' />
             </Content>
 
             <div className='my-6 flex justify-center'>
@@ -221,12 +221,12 @@ function NormativasGenerales() {
 
               <ListItemContent title='Disparar mientras se está apoyado en una pared sin asomar' description='Se debe sacar el cuerpo completamente al disparar para mantener el juego justo.' />
               <div className='flex justify-center my-4'>
-                <Image src={"/disparar1.png"} alt={"Disparar apoyado en pared"} width={900} height={900} className='rounded-lg shadow-lg' />
+                <Image src={"/chabe2.png"} alt={"Disparar apoyado en pared"} width={900} height={900} className='rounded-lg shadow-lg' />
               </div>
 
               <ListItemContent title='Disparar estando agachado' description='Debe estar de pie completamente al disparar para evitar ventajas injustas en la hitbox.' />
               <div className='flex justify-center my-4'>
-                <Image src={"/disparar2.png"} alt={"Disparar agachado"} width={900} height={900} className='rounded-lg shadow-lg' />
+                <Image src={"/chabe1.png"} alt={"Disparar agachado"} width={900} height={900} className='rounded-lg shadow-lg' />
               </div>
             </Content>
           </SubSectionContent>

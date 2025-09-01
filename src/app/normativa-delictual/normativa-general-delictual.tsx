@@ -1,5 +1,6 @@
 import { SectionContent, SubSectionContent, HeaderContent, ListItemContent, ContentFooter, Content } from "@/components/sections"
 import React from "react"
+import Image from "next/image"
 
 function NormativaDelictual(){
    return <div>
@@ -167,9 +168,19 @@ function NormativaDelictual(){
             </HeaderContent>
           </SubSectionContent>
         </SectionContent>
+        <SectionContent reference='Vehículos Modificados'>
+          <SubSectionContent reference='Vehículos Modificados'>
+            <HeaderContent title='Vehículos Modificados' id='9'>
+            Queda prohibido el uso de Nitro, blindaje en carrocería y blindaje en ruedas en los vehículos; 
+            si un vehículo es sorprendido con alguna de estas modificaciones y se da a la fuga, se colocará 
+            en búsqueda por su patente, y en caso de detención, se aplicará una multa y el vehículo será llevado 
+            al mecánico para retirar la modificación. 
+            </HeaderContent>
+          </SubSectionContent>
+        </SectionContent>
         <SectionContent reference='Búsqueda de Vehículos'>
           <SubSectionContent reference='Búsqueda de Vehículos'>
-            <HeaderContent title='Búsqueda de Vehículos' id='9'>
+            <HeaderContent title='Búsqueda de Vehículos' id='10'>
             En caso de un rol delictivo donde la policía pierda de vista al perseguido, la búsqueda del 
             vehículo podrá prolongarse por un máximo de 15 minutos. La persona involucrada no 
             podrá cambiar de vehículo o guardarlo sin enviar el entorno correspondiente de cambio 
@@ -180,7 +191,7 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Búsqueda de Sujetos'>
           <SubSectionContent reference='Búsqueda de Sujetos'>
-            <HeaderContent title='Búsqueda de Sujetos' id='10'>
+            <HeaderContent title='Búsqueda de Sujetos' id='11'>
             En caso de un rol delictivo donde los sospechosos logren escapar y sean perdidos de vista, 
             la búsqueda deberá realizarse por un máximo de 15 minutos. Si durante un enfrentamiento 
             varios delincuentes son abatidos, pero aún quedan uno o dos en la escena, estos tendrán 
@@ -190,24 +201,27 @@ function NormativaDelictual(){
             </HeaderContent>
           </SubSectionContent>
         </SectionContent>
-        <SectionContent reference='Límite de Velocidad en Ciudad y Actos '>
-          <SubSectionContent reference='Límite de Velocidad en Ciudad y Actos '>
-            <HeaderContent title='Límite de Velocidad en Ciudad y Actos ' id='11'>
-            <Content title='Velocidades Permitidas ' id='11.1' spaced>
+        <SectionContent reference='Límite de Velocidad en Ciudad '>
+          <SubSectionContent reference='Límite de Velocidad en Ciudad '>
+            <HeaderContent title='Límite de Velocidad en Ciudad ' id='12'>
+            <Content title='Velocidades Permitidas ' id='12.1' spaced>
               <ListItemContent
                 items={[
-                      "Zona urbana central (rectángulo azul en el mapa): Máximo 100 km/h (incluye comisaría, hospital, municipalidad y talleres mecánicos). Resto de la ciudad: Máximo 150 km/h. ",
-                      "Carreteras principales (marcadas en amarillo en el mapa): Máximo 250 km/h ",
-                      "Zonas urbanas en el norte (Paleto y Sandy Shores): Máximo 150 km/h. "
+                      "Zona urbana central (rectángulo azul en el mapa): Máximo 120 km/h (incluye comisaría, hospital, municipalidad y talleres mecánicos). Resto de la ciudad: Máximo 170 km/h. ",
+                      "Carreteras principales (marcadas en amarillo en el mapa): Máximo 300 km/h ",
+                      "Zonas urbanas en el norte (Paleto y Sandy Shores): Máximo 180 km/h. "
                 ]}                
               />
             </Content>  
             </HeaderContent>
+                          <div className='my-6 flex justify-center'>
+                            <Image src={"/mapa.avif"} alt={"Mapa de velocidades"} width={900} height={900} className='rounded-lg shadow-lg' />
+                          </div>
           </SubSectionContent>
         </SectionContent>
         <SectionContent reference='Control y Fiscalización '>
           <SubSectionContent reference='Control y Fiscalización '>
-            <HeaderContent title='Control y Fiscalización ' id='12'>
+            <HeaderContent title='Control y Fiscalización ' id='13'>
             La policía podrá fiscalizar vehículos que excedan estos límites y utilizar radares para 
             identificar vehículos.
             <br /><br />
@@ -218,7 +232,7 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Reglas en Actos Delictuales '>
           <SubSectionContent reference='Reglas en Actos Delictuales '>
-            <HeaderContent title='Reglas en Actos Delictuales ' id='13'>
+            <HeaderContent title='Reglas en Actos Delictuales ' id='14'>
             La velocidad máxima permitida en situaciones delictivas es de 250 km/h, con un margen de 
             error de hasta 10 km/h debido a variaciones por saltos.
             <br /><br />
@@ -231,10 +245,9 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Persecuciones y Cruce de Frontera '>
           <SubSectionContent reference='Persecuciones y Cruce de Frontera '>
-            <HeaderContent title='Persecuciones y Cruce de Frontera ' id='14'>
+            <HeaderContent title='Persecuciones y Cruce de Frontera ' id='15'>
             Si un rol se inicia en una zona y, durante la persecución, el delincuente cruza la frontera 
-            bloqueada, la policía del territorio al que ingresa podrá acudir en apoyo a la persecución 
-            sin considerar la regla del +1.
+            bloqueada, la policía podra solicitar apoyo de 2 oficiales adicionales.
             <br /><br />
             <Content title='Condiciones de la Intervención Policial en caso de cruzar Frontera. ' id='14.1' spaced>
               <ListItemContent
@@ -249,22 +262,22 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Medios de Cruce Alternativos'>
           <SubSectionContent reference='Medios de Cruce Alternativos'>
-            <HeaderContent title='Medios de Cruce Alternativos' id='15'>
+            <HeaderContent title='Medios de Cruce Alternativos' id='16'>
             Si el cruce de frontera se realiza por medios distintos (aéreos, acuáticos u otros que no 
             impliquen atravesar una frontera bloqueada), los delincuentes deberán enviar un 
-            entorno. En este caso, la cantidad de efectivos policiales que se sumen al rol deberá ser 
-            igual a la cantidad de oficiales que ya estaban en persecución.
+            entorno. En este caso, la Policia podra solicitar las unidades que sean necesarias para terminar
+            la persecución.
             <br /><br />
             <span className="font-bold">Ejemplo:</span>
             <br />
-            Si la persecución inició con 4 oficiales del Sheriff, al cruzar la frontera podrán sumarse 4 
-            oficiales de la LSPD. 
+            Si la persecución inició con 4 oficiales de la LSPD, al cruzar la frontera podrán sumarse 2 
+            oficiales de la LSPD extras. 
             </HeaderContent>
           </SubSectionContent>
         </SectionContent>
         <SectionContent reference='Uso de Vestimenta y Fiscalización Policial '>
           <SubSectionContent reference='Uso de Vestimenta y Fiscalización Policial '>
-            <HeaderContent title='Uso de Vestimenta y Fiscalización Policial ' id='16'>
+            <HeaderContent title='Uso de Vestimenta y Fiscalización Policial ' id='17'>
             Como se indica en la normativa sobre vestimenta, el uso de cascos y chalecos antibalas 
             presume una intención delictiva y solo está permitido en ciertos lugares. Por lo tanto, llevar 
             estos elementos en la ciudad dará lugar a una fiscalización policial completa.
@@ -277,12 +290,12 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Intento de Detención Vehicular con Fines Delictuales '>
           <SubSectionContent reference='Intento de Detención Vehicular con Fines Delictuales '>
-            <HeaderContent title='Intento de Detención Vehicular con Fines Delictuales ' id='17'>
+            <HeaderContent title='Intento de Detención Vehicular con Fines Delictuales ' id='18'>
             En caso de que un sujeto intente detener un vehículo con fines delictivos (robo o 
             secuestro), el simple hecho de decir "párate" o "detente" no es una amenaza suficiente 
             para obligar la detención. 
             <br /><br />
-            <Content title='Sin embargo: ' id='17.1' spaced>
+            <Content title='Sin embargo: ' id='18.1' spaced>
               <ListItemContent
                 items={[
                       "Si el sujeto saca un arma por la ventana, esto sí representa un riesgo inmediato, por lo que se debe detener el vehículo en valoración de vida. ",
@@ -296,13 +309,13 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Enfrentamientos Armados cerca de Lugares con RDE (Rol de Entorno) Gubernamental '>
           <SubSectionContent reference='Enfrentamientos Armados cerca de Lugares con RDE (Rol de Entorno) Gubernamental '>
-            <HeaderContent title='Enfrentamientos Armados cerca de Lugares con RDE (Rol de Entorno) Gubernamental ' id='18'>
+            <HeaderContent title='Enfrentamientos Armados cerca de Lugares con RDE (Rol de Entorno) Gubernamental ' id='19'>
             En caso de un enfrentamiento armado cerca de lugares que cuenten con RDE 
             gubernamental (es decir, zonas con seguridad establecida), se deja claro que esto faculta 
             a la policía a terminar el conflicto sin considerar la igualdad numérica de las 
             organizaciones involucradas.
             <br /><br />
-            <Content title='Lugares con RDE gubernamental incluyen: ' id='18.1' spaced>
+            <Content title='Lugares con RDE gubernamental incluyen: ' id='19.1' spaced>
               <ListItemContent
                 items={[
                       "Comisarías (incluso aquellas que no están en uso). ",
@@ -323,8 +336,8 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Tiroteos en Vehículos '>
           <SubSectionContent reference='Tiroteos en Vehículos '>
-            <HeaderContent title='Tiroteos en Vehículos ' id='19'>
-            <Content title=' Disparos desde un vehículo: ' id='19.1' spaced>
+            <HeaderContent title='Tiroteos en Vehículos ' id='20'>
+            <Content title=' Disparos desde un vehículo: ' id='20.1' spaced>
               <ListItemContent
                 items={[
                       "Solo está permitido disparar a las ruedas de otro vehículo cuando se está en movimiento. ",
@@ -346,7 +359,7 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Prioridades y Procedimientos en Entornos Delictuales con Múltiples Sujetos y Vehículos'>
           <SubSectionContent reference='Prioridades y Procedimientos en Entornos Delictuales con Múltiples Sujetos y Vehículos'>
-            <HeaderContent title='Prioridades y Procedimientos en Entornos Delictuales con Múltiples Sujetos y Vehículos' id='20'>
+            <HeaderContent title='Prioridades y Procedimientos en Entornos Delictuales con Múltiples Sujetos y Vehículos' id='21'>
             En situaciones donde un entorno delictual involucre múltiples sujetos en distintas 
             ubicaciones y vehículos (ejemplo: robo con huida y cómplices externos bloqueando calles), 
             se deberán seguir las siguientes prioridades y reglas: 
@@ -364,7 +377,7 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Para evitar confusiones y asegurar un desarrollo claro del rol, el entorno enviado debe ser lo más detallado posible, especificando:'>
           <SubSectionContent reference='Para evitar confusiones y asegurar un desarrollo claro del rol, el entorno enviado debe ser lo más detallado posible, especificando: '>
-            <HeaderContent title='Para evitar confusiones y asegurar un desarrollo claro del rol, el entorno enviado debe ser lo más detallado posible, especificando: ' id='21'>     
+            <HeaderContent title='Para evitar confusiones y asegurar un desarrollo claro del rol, el entorno enviado debe ser lo más detallado posible, especificando: ' id='22'>     
             ● Cantidad de sujetos involucrados Vestimenta de los sospechosos 
             <br />
             ● Armas y calibre portado  
@@ -390,7 +403,7 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Negociaciones '>
           <SubSectionContent reference='Negociaciones '>
-            <HeaderContent title='Negociaciones ' id='22'>
+            <HeaderContent title='Negociaciones ' id='23'>
             Una vez realizada la negociación con la LSPD/LSSD, se respetará el acuerdo siempre que 
             no se incurra en una falta que lo invalide. La policía deberá emitir avisos antes de tomar 
             medidas drásticas de detención, como el uso de pinchos, la maniobra PIT o el código 
@@ -407,12 +420,12 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='SECUESTROS'>
           <SubSectionContent reference='SECUESTROS '>
-            <HeaderContent title='Secuestros ' id='23'>
-            <Content title='Disponibilidad Policial: ' id='23.1' spaced>
+            <HeaderContent title='Secuestros ' id='24'>
+            <Content title='Disponibilidad Policial: ' id='24.1' spaced>
               <ListItemContent
                 items={[
                       "Civiles: Se puede secuestrar siempre que exista disponibilidad policial y se respete el +1 policial. Es decir, si hay 2 secuestradores, deben haber al menos 3 policías disponibles. ",
-                      "Policía/Sheriff: Se requiere un mínimo de 7 efectivos disponibles (contando al secuestrado). ",
+                      "Policía: Se requiere un mínimo de 7 efectivos disponibles (contando al secuestrado). ",
                       "EMS: Para secuestrar a un EMS, deben haber al menos 7 EMS disponibles."
                 ]}                
               />
@@ -429,8 +442,8 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Tipos de Secuestro '>
           <SubSectionContent reference='Tipos de Secuestro '>
-            <HeaderContent title='Tipos de Secuestro ' id='24'>   
-            <Content title='1. Secuestro para uso como rehén en un acto delictivo:  ' id='24.1' spaced>
+            <HeaderContent title='Tipos de Secuestro ' id='25'>   
+            <Content title='1. Secuestro para uso como rehén en un acto delictivo:  ' id='25.1' spaced>
               <ListItemContent
                 items={[
                       "Debe ser breve. ",
@@ -438,7 +451,7 @@ function NormativaDelictual(){
                 ]}                
               />
             </Content>  
-            <Content title='2. Secuestro con otros fines (tortura, interrogatorio, etc.): ' id='24.2' spaced>
+            <Content title='2. Secuestro con otros fines (tortura, interrogatorio, etc.): ' id='25.2' spaced>
               <ListItemContent
                 items={[
                   "Se debe especificar en el entorno que se está secuestrando a alguien y trasladándose a otro lugar.",
@@ -449,10 +462,10 @@ function NormativaDelictual(){
             ]}              
               />
             </Content> 
-            <Content title='3. Secuestro de Oficiales ' id='24.3' spaced>
+            <Content title='3. Secuestro de Oficiales ' id='25.3' spaced>
               <ListItemContent
                 items={[
-                      "En caso de secuestro de más de un oficial, ya sea del Sheriff o LSPD, se elevará la alerta en la zona. Esto significa que no será necesario emitir avisos previos para la detención de los sospechosos. ",
+                      "En caso de secuestro de más de un oficial, se elevará la alerta en la zona. Esto significa que no será necesario emitir avisos previos para la detención de los sospechosos. ",
                       "Se debe priorizar la vida de los oficiales secuestrados, por lo que queda prohibido abrir fuego contra el vehículo en movimiento con el objetivo de detenerlo, debido al alto riesgo que esto representa. ",
                       "Se permitirá el uso de bloqueos estratégicos para impedir su escape. En caso de que un bloqueo sea efectivo y los sospechosos queden rodeados, estos deberán descender del vehículo y proceder a negociar en el lugar, sin posibilidad de continuar hasta su destino. "
                 ]}                
@@ -463,7 +476,7 @@ function NormativaDelictual(){
         </SectionContent>
         <SectionContent reference='Reglas Generales'>
           <SubSectionContent reference='Reglas Generales'>
-            <HeaderContent title='Reglas Generales' id='25'>
+            <HeaderContent title='Reglas Generales' id='26'>
             ● El rehén o sujeto secuestrado debe ir sentado en un asiento del vehículo; está 
             prohibido llevarlo cargado en los hombros.
             <br /><br />

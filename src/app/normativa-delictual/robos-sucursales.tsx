@@ -6,32 +6,25 @@ function RobosSucursales(){
     <h2 className='text-2xl font-bold mb-6 flex items-center gap-3' id='Concepto'>
     <span>💵 Reglamento De Robos</span>
     </h2> 
-            Es fundamental tener en cuenta que dentro de la ciudad operan dos cuerpos policiales 
-            independientes, cada uno con su propio entorno y responsabilidades: la LSPD (Los Santos 
-            Police Department) y la LSSD (Los Santos Sheriff Department).
+            Es fundamental tener en cuenta que dentro de la ciudad operan un cuerpo policial 
+            independiente: la LSPD (Los Santos Police Department).
             <br /><br />
-            ada cuerpo mantiene 
-            jurisdicciones distintas y responde a incidentes según su disponibilidad y zona de cobertura. 
+            Responde a incidentes según su disponibilidad y zona de cobertura. 
             Para reportar emergencias o solicitar intervención policial, los ciudadanos deberán utilizar 
-            los comandos correspondientes: para la LSPD se debe emplear /911, mientras que para la 
-            LSSD el comando correcto es /911n. Es de vital importancia enviar los avisos al cuerpo 
-            adecuado según la ubicación del incidente, ya que un reporte enviado al organismo 
-            incorrecto puede generar demoras en la respuesta y afectar la efectividad del rol.
-            <br /><br />
-            Además, ambos cuerpos tienen protocolos de actuación propios, por lo que la precisión en la elección 
-            del comando contribuye a mantener la coherencia, el realismo y la fluidez en las tramas 
-            policiales dentro del servidor.
+            los comandos correspondientes: para la LSPD se debe emplear /911. Es de vital 
+            importancia enviar los avisos al cuerpo adecuado según la ubicación del incidente, 
+            ya que un reporte enviado al organismo incorrecto puede generar demoras en 
+            la respuesta y afectar la efectividad del rol.
             <br /><br />
       <SubSectionContent reference='DISPONIBILIDAD DE LSPD '>
         <HeaderContent title='Disponibilidad De LSPD ' id='2..'>
         La disponibilidad de la LSPD se informa mediante un anuncio IC y también se refleja en 
         la pantalla en la esquina superior derecha, donde se indica la cantidad de policías 
-        disponibles para acudir a llamados a través de /911 (LSPD) o /911n (LSSD). 
+        disponibles para acudir a llamados a través de /911 (LSPD). 
         <br /><br />
         Esta información debe ser actualizada cada 15 minutos por un funcionario disponible, 
         asegurando que los jugadores siempre cuenten con datos precisos sobre la respuesta 
-        policial. Además, cualquier ciudadano puede consultar la disponibilidad directamente 
-        utilizando el comando /911 o /911 seguido de “Se solicita disponibilidad”.
+        policial.
         <br /><br />
 
         </HeaderContent>
