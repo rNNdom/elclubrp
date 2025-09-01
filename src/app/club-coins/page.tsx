@@ -13,12 +13,12 @@ export default function ClubCoins() {
   const navigationSections = [
     {
       id: "club-coins",
-      title: "Club Coins",
+      title: "Clubies",
       icon: "🌟",
       items: [
-        { id: "que-son", label: "¿Qué son las Club Coins?", level: 0 },
+        { id: "que-son", label: "¿Qué son los Clubies?", level: 0 },
         { id: "como-conseguir", label: "¿Cómo se consiguen?", level: 0 },
-        { id: "como-consultar", label: "¿Cómo consulto mis coins?", level: 0 },
+        { id: "como-consultar", label: "¿Cómo consulto mis Clubies?", level: 0 },
         { id: "para-que-sirven", label: "¿Para qué sirven?", level: 0 },
         { id: "acceso-vip", label: "Acceso VIP", level: 0 }
       ]
@@ -58,7 +58,7 @@ export default function ClubCoins() {
         <div className='relative z-10 flex items-center justify-center h-full'>
           <div className='text-center text-white px-4'>
             <h1 className='text-3xl md:text-5xl font-bold mb-4'>
-              <span className='text-purple-300'>CLUB</span> <span className='text-orange-300'>COINS</span>
+              <span className='text-purple-300'>LOS</span> <span className='text-orange-300'>CLUBIES</span>
             </h1>
             <p className='text-lg md:text-xl opacity-100 max-w-2xl mx-auto'>La moneda especial de nuestro servidor para premiar tu tiempo en ciudad</p>
           </div>
@@ -78,7 +78,7 @@ export default function ClubCoins() {
               <div className='w-full flex justify-start'>
                 <div className='bg-gray-200 p-4 rounded-lg'>
                   <p className='text-2xl text-orange-400 uppercase '>
-                    <b className='text-purple-600 '>Club</b> Coins
+                    <b className='text-purple-600 '>Club</b>ies
                   </p>
                 </div>
               </div>
@@ -123,11 +123,11 @@ export default function ClubCoins() {
                 {/* Content sections */}
                 <div>
                   <h2 className='text-2xl font-bold mb-6 flex items-center gap-3' id='que-son'>
-                    <span>¿Qué son las Club Coins?</span>
+                    <span>¿Qué son los Clubies?</span>
                   </h2>
                   <div className='bg-blue-50 border-l-4 border-blue-400 p-4 mb-6'>
                     <p className='text-gray-800 leading-relaxed'>
-                      Las Club Coins son la moneda especial de nuestro servidor, pensada para premiar tu tiempo en ciudad y darte acceso a beneficios exclusivos.
+                      Los Clubies son la moneda especial de nuestro servidor, pensada para premiar tu tiempo en ciudad y darte acceso a beneficios exclusivos.
                     </p>
                   </div>
                 </div>
@@ -136,22 +136,22 @@ export default function ClubCoins() {
                   <SectionContent reference='¿Cómo se consiguen?'>
                     <SubSectionContent reference='¿Cómo se consiguen?'>
                       <HeaderContent title='¿Cómo se consiguen?' id='como-conseguir'>
-                        Existen varias formas de obtener Club Coins en nuestro servidor. Cada método está diseñado para recompensar diferentes aspectos de tu participación en la comunidad.
+                        Existen varias formas de obtener Clubies en nuestro servidor. Cada método está diseñado para recompensar diferentes aspectos de tu participación en la comunidad.
                       </HeaderContent>
 
                       <Content title='Métodos de obtención:' id='metodos-obtencion' spaced>
-                        <ListItemContent title='Tiempo en ciudad' description='Por cada hora de juego recibes automáticamente Club Coins.' icon={<ClockIcon className='w-5 h-5 text-blue-600' />} />
+                        <ListItemContent title='Tiempo en ciudad' description='Por cada hora de juego recibes automáticamente Clubies.' icon={<ClockIcon className='w-5 h-5 text-blue-600' />} />
                         <ListItemContent
                           title='Recompensa diaria'
-                          description='Con el comando /regalito podrás reclamar una cantidad de coins todos los días.'
+                          description='Con el comando /regalito podrás reclamar una cantidad de clubies todos los días.'
                           icon={<GiftIcon className='w-5 h-5 text-green-600' />}
                         />
                         <ListItemContent
                           title='Donaciones'
-                          description='También puedes obtener Club Coins a través de nuestro sistema de apoyo/donaciones.'
+                          description='También puedes obtener Clubies a través de nuestro sistema de apoyo/donaciones.'
                           icon={<StarIcon className='w-5 h-5 text-yellow-600' />}
                         />
-                        <ListItemContent title='Eventos y concursos' description='En actividades especiales se entregarán coins como premios.' icon={<ZapIcon className='w-5 h-5 text-purple-600' />} />
+                        <ListItemContent title='Eventos y concursos' description='En actividades especiales se entregarán clubies como premios.' icon={<ZapIcon className='w-5 h-5 text-purple-600' />} />
                       </Content>
                     </SubSectionContent>
                   </SectionContent>
@@ -159,7 +159,7 @@ export default function ClubCoins() {
                   <SectionContent reference='¿Cómo consulto mis coins?'>
                     <SubSectionContent reference='¿Cómo consulto mis coins?'>
                       <HeaderContent title='¿Cómo consulto mis coins?' id='como-consultar'>
-                        Usa el comando <code className='bg-gray-100 px-2 py-1 rounded text-purple-600 font-mono'>/club</code> en cualquier momento y el sistema te mostrará cuántas Club Coins tienes
+                        Usa el comando <code className='bg-gray-100 px-2 py-1 rounded text-purple-600 font-mono'>/club</code> en cualquier momento y el sistema te mostrará cuántas Clubies tienes
                         acumuladas.
                       </HeaderContent>
                     </SubSectionContent>
@@ -168,7 +168,7 @@ export default function ClubCoins() {
                   <SectionContent reference='¿Para qué sirven?'>
                     <SubSectionContent reference='¿Para qué sirven?'>
                       <HeaderContent title='¿Para qué sirven?' id='para-que-sirven'>
-                        Las Club Coins se utilizan en una tienda exclusiva, que abre una vez a la semana para todos los jugadores. Allí podrás encontrar productos y servicios únicos que no están
+                        Los Clubies se utilizan en una tienda exclusiva, que abre una vez a la semana para todos los jugadores. Allí podrás encontrar productos y servicios únicos que no están
                         disponibles en el juego normal.
                       </HeaderContent>
 
@@ -193,14 +193,14 @@ export default function ClubCoins() {
                   <SectionContent reference='Acceso VIP'>
                     <SubSectionContent reference='Acceso VIP'>
                       <HeaderContent title='Acceso VIP' id='acceso-vip'>
-                        Si cuentas con un paquete VIP, recibirás una tarjeta de acceso que te permitirá entrar a la tienda en cualquier momento, sin esperar la apertura semanal.
+                        Al comprar Clubies recibirás un rango VIP, existen tres rangos que dependen de la cantidad de Clubies adquiridos. 
                       </HeaderContent>
                       <ContentFooter>
                         <div className='flex items-center gap-2 mb-2'>
                           <CrownIcon className='w-6 h-6 text-yellow-600' />
                           <span className='font-bold text-yellow-600'>Beneficio VIP:</span>
                         </div>
-                        Los jugadores VIP tienen acceso prioritario y exclusivo a la tienda de Club Coins, permitiéndoles comprar en cualquier momento sin restricciones de horario.
+                        El rango VIP no solo te permitirá comprar vehículos en el concesionario exclusivo y artículos especiales como cupones de tuneo o cambio de motor, sino que también te otorgará beneficios IC, como cobrar un bono diario en el banco, utilizar los televisores y disfrutar de otras ventajas exclusivas dentro de la ciudad..
                       </ContentFooter>
                     </SubSectionContent>
                   </SectionContent>
@@ -209,10 +209,10 @@ export default function ClubCoins() {
                   <div className='bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-6 mt-8'>
                     <div className='flex items-center gap-3 mb-4'>
                       <ZapIcon className='w-8 h-8 text-purple-600' />
-                      <h3 className='text-xl font-bold text-purple-700'>¡Acumula tus Club Coins!</h3>
+                      <h3 className='text-xl font-bold text-purple-700'>¡Acumula tus Clubies!</h3>
                     </div>
                     <p className='text-gray-800 leading-relaxed'>
-                      Disfruta de ventajas únicas en la ciudad. Cuanto más tiempo pases jugando y participando en eventos, más Club Coins podrás acumular para acceder a contenido exclusivo.
+                      Disfruta de ventajas únicas en la ciudad. Cuanto más tiempo pases jugando y participando en eventos, más Clubies podrás acumular para acceder a contenido exclusivo.
                     </p>
                   </div>
                 </div>

@@ -32,8 +32,57 @@ function NormativaEMS(){
         gravedad del caso.
         </HeaderContent>
       </SubSectionContent>
+      <SubSectionContent reference='Servicio'>
+        <HeaderContent title='Corrupcion y Vinculacion a ODs' id='3'>
+        Está permitido pertenecer a una organización delictual, sin embargo, se deben respetar ciertas 
+        normas y reglas, las cuales prohíben realizar algunos actos para respetar el rol del personaje y 
+        el entorno del hospital.. 
+        <br /><br />
+        <br />
+        ● NO se podrá ingresar, ni postular a la facción con antecedentes, una vez dentro de la facción 
+        solo se aceptarán un máximo de 3 antecedentes en caso de estos ser menores, por ejemplo, robos a badulaques, 
+        flecca o joyerías, lo que no significa que queden exentos de investigación y seguimiento. 
+        Está prohibido realizar actos delictuales dentro de servicio. (Sanción OOC e IC).
+        <br />
+        <br />
+        ● Los médicos que participen en tiroteos, venta de droga, secuestros, u otro acto ilegal que realicen 
+        fuera de servicio puede conllevar una sanción o desvinculación por parte de la jefatura de EMS al ser 
+        descubiertos y/o detenidos.
+        <br />
+        <br />
+        ● Está estrictamente prohibido la venta y/o comercialización del equipamiento médico, a excepción 
+        de la morfina. (Sanción OOC e IC).
+        <br />
+        <br />
+        ● NO está permitido el priorizar o el atender llamados por pertenecer a la misma organización, 
+        de igual manera, no se permite posponer, no realizar o realizar mal el tratamiento a integrantes 
+        de organizaciones opuestas, ni la revelación de información personal como DNI o en caso de pertenecer 
+        al área psiquiátrica, la información confidencial de un paciente. De ser descubierto realizando 
+        dichas acciones tiene que asumir consecuencias.
+        (Sanción OOC e IC). 
+        <br />
+        <br />
+        ●Está permitida la corrupción desde el rango cirujano en adelante, ya sea ir a revivir personas fuera 
+        del hospital, escabullir gente custodiada por la policia fuera del hospital, mentir en informes a superiores 
+        o contrabandear medicina (especificadas en punto 3) importante NO ser descubierto ni detenido, 
+        en caso de ser descubierto la sanción puede variar desde desvinculación hasta perpetua.
+        <br />
+        <br />
+        ●Algunas de estas normas y/o reglas se pueden pasar por alto con un rol pactado, del cual los administradores 
+        y el jefe de la facción deben estar al tanto. De lo contrario, no será contado como rol pactado y llevará la sanción 
+        correspondiente. En caso de tener dudas sobre si una acción está permitida o no, consultar a la administración antes de proceder.
+        </HeaderContent>
+      </SubSectionContent>
+      <SubSectionContent reference='Servicio'>
+        <HeaderContent title='Abuso de corrupción y servicio a la comunidad' id='4'>
+        Si bien está permitida la corrupción y la vinculación de miembros de la facción a roles criminales, 
+        es importante siempre priorizar la atención a la comunidad en general, por lo que se exigirá que todo 
+        miembro deba priorizar la atención de su trabajo como médico, estando en servicio no podrá negar la atención 
+        ni atender preferentemente a un jugador por sobre otro. 
+        </HeaderContent>
+      </SubSectionContent>
       <SubSectionContent reference='Mascaras'>
-        <HeaderContent title='Uso de Máscaras' id='3'>
+        <HeaderContent title='Uso de Máscaras' id='5'>
         Está prohibido el uso de máscaras dentro del hospital, tanto por parte del personal como de 
         los heridos o civiles. Esta norma se implementa para garantizar una correcta identificación y 
         facilitar la atención médica, así como para prevenir problemas de comunicación o confusión. 

@@ -23,8 +23,10 @@ export default function NormativaGeneral() {
       items: [
         { id: "1", label: "Atenciones igualitarias", level: 0 },
         { id: "2", label: "Uniforme de servicio", level: 0 },
-        { id: "3", label: "Uso de Máscaras", level: 0 },
-        { id: "4", label: "Estados Del Paciente:", level: 0 }
+        { id: "3", label: "Corrupcion y Vinculacion con ODs", level: 0 },
+        { id: "4", label: "Abuso de corrupción y servicio a la comunidad", level: 0 },
+        { id: "5", label: "Uso de Máscaras", level: 0 },
+        { id: "6", label: "Estados Del Paciente:", level: 0 }
       
       ]
     },

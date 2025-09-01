@@ -7,11 +7,11 @@ function NormativaLSPD(){
         <span className="font-bold">🚨 Normativa General Policial </span>
         </h2>
         
-        Sección donde podrás encontrar normativas generales policial. 
+        Sección donde podrás encontrar la NORMATIVA POLICIAL. 
         <br /><br />
-        Esta normativa es de conocimiento público para toda la ciudadanía. No obstante, cada 
+        Esta normativa es de conocimiento público para toda la ciudadanía. No obstante, la 
         institución policial puede contar con un reglamento interno de comportamiento, siempre 
-        que este no afecte su relación con la ciudad. Dichos reglamentos internos pueden incluir 
+        que este no afecte su relación con la ciudad. Dicho reglamento interno pueden incluir 
         normas sobre vestimenta o protocolos de actuación dentro de la institución.
         <br /><br />
         <Content title='Estructura Jerárquica LSPD' id='1' spaced>
