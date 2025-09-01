@@ -199,14 +199,14 @@ function NormativasGenerales() {
           </SubSectionContent>
 
           <SubSectionContent reference='Control y Fiscalización'>
-            <HeaderContent title='18 Control y Fiscalización' id='18.'>
+            <HeaderContent title='18. Control y Fiscalización' id='18.'>
               La policía podrá fiscalizar vehículos que excedan estos límites y utilizar radares para identificar vehículos. Si un vehículo es detectado superando el límite por control, radar o
               helicóptero, se podrá iniciar una búsqueda por un máximo de 15 minutos.
             </HeaderContent>
           </SubSectionContent>
 
           <SubSectionContent reference='Reglas en Actos Delictuales'>
-            <HeaderContent title='19 Reglas en Actos Delictuales' id='19.'>
+            <HeaderContent title='19. Reglas en Actos Delictuales' id='19.'>
               La velocidad máxima permitida en situaciones delictivas es de 250 km/h, con un margen de error de hasta 10 km/h debido a variaciones por saltos. Si un vehículo supera esta velocidad, la
               policía podrá desplegar un interceptor. En caso de utilizar un vehículo prohibido para actos delictivos o huir de un control de tránsito, se aplicará sanción administrativa adicional.
             </HeaderContent>
