@@ -93,7 +93,7 @@ export default function ClubCoins() {
                 Discord
               </a>
               <a
-                href='https://discord.gg/cgzSFSn9av'
+                href='https://www.tiktok.com/@elclubrp'
                 target='_blank'
                 className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all text-sm'
               >
