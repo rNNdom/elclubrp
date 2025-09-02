@@ -43,6 +43,7 @@ function Sanciones() {
                 description=''
                 items={[
                   "Warning (LDA): Llamado de atención",
+                  "Trabajo Comunitario: La cantidad de trabajo dependera de la Falta",
                   "Sanción Leve (L): 1 - 5 horas de BAN",
                   "Sanción Media (M): 5 - 24 horas de BAN",
                   "Sanción Grave (G): 24 - 72 horas de BAN",

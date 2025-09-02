@@ -1,5 +1,6 @@
 import { SectionContent, SubSectionContent, HeaderContent, ListItemContent, ContentFooter, Content } from "@/components/sections"
 import React from "react"
+import Image from "next/image"
 
 function NormativaDelictual() {
   return (
