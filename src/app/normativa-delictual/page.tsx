@@ -22,31 +22,37 @@ export default function NormativaGeneral() {
       title: "Normativa General Delictual",
       icon: "🗡️",
       items: [
-        { id: "1", label: "Toxicidad Con EMS/LSPD", level: 0 },
-        { id: "2", label: "Protección al Civil", level: 0 },
-        { id: "3", label: "Cacheo", level: 0 },
-        { id: "4", label: "Uso de entornos", level: 0 },
-        { id: "5", label: "1. Obligatoriedad del Entorno", level: 0 },
-        { id: "6", label: "2. Entorno en Laboratorios y Farmeo de Drogas", level: 0 },
-        { id: "7", label: "3. Entorno en Roles Espontáneos", level: 0 },
-        { id: "8", label: "Errores en el Entorno", level: 0 },
-        { id: "9", label: "Búsqueda De Vehiculos", level: 0 },
-        { id: "10", label: "Búsqueda De Sujetos", level: 0 },
-        { id: "11", label: "Límite de Velocidad en Ciudad y Actos", level: 0 },
-        { id: "12", label: "Control y Fiscalización", level: 0 },
-        { id: "13", label: "Reglas en Actos Delictuales", level: 0 },
-        { id: "14", label: "Persecuciones y Cruce de Frontera", level: 0 },
-        { id: "15", label: "Medios de Cruce Alternativos", level: 0 },
-        { id: "16", label: "Uso de Vestimenta y Fiscalización Policial", level: 0 },
-        { id: "17", label: "Intento de Detención Vehicular con Fines Delictuales", level: 0 },
-        { id: "18", label: "Enfrentamientos Armados cerca de Lugares con RDE (Rol de Entorno) Gubernamental", level: 0 },
-        { id: "19", label: "Tiroteos en Vehículos", level: 0 },
-        { id: "20", label: "Prioridades y Procedimientos en Entornos Delictuales con Múltiples Sujetos y Vehículos", level: 0 },
-        { id: "21", label: "Para evitar confusiones y asegurar un desarrollo claro del rol, el entorno enviado debe ser lo más detallado posible, especificando", level: 0 },
-        { id: "22", label: "Negociaciones", level: 0 },
-        { id: "23", label: "Secuestros", level: 0 },
-        { id: "24", label: "Tipos de Secuestro", level: 0 },
-        { id: "25", label: "Reglas Generales", level: 0 },
+        { id: "1", label: "1. Toxicidad Con EMS/LSPD", level: 0 },
+        { id: "2", label: "2. Protección al Civil", level: 0 },
+        { id: "3", label: "3. Cacheo", level: 0 },
+        { id: "4", label: "4. Uso de entornos", level: 0 },
+        { id: "4.1", label: "4.1 Ejemplos de entorno correctos", level: 1 },
+        { id: "4.2", label: "4.2 Obligatoriedad del Entorno", level: 1 },
+        { id: "4.3", label: "4.3 Entorno en laboratorios y farmeo de drogas", level: 1 },
+        { id: "4.4", label: "4.4 Entorno en roles espontáneos", level: 1 },
+        { id: "4.5", label: "4.5 Errores en el Entorno", level: 1 },
+        { id: "5", label: "5. Búsqueda De Vehiculos", level: 0 },
+        { id: "6", label: "6. Búsqueda De Sujetos", level: 0 },
+        { id: "7", label: "7. Límite de Velocidad en Ciudad y Actos", level: 0 },
+        { id: "7.1", label: "Velocidades Permitidas", level: 1 },
+        { id: "8", label: "8. Control y Fiscalización", level: 0 },
+        { id: "9", label: "9. Reglas en Actos Delictuales", level: 0 },
+        { id: "10", label: "10. Persecuciones y Cruce de Frontera", level: 0 },
+        { id: "10.1", label: "Condiciones de la Intervención Policial", level: 1 },
+        { id: "11", label: "11. Medios de Cruce Alternativos", level: 0 },
+        { id: "12", label: "12. Uso de Vestimenta y Fiscalización Policial", level: 0 },
+        { id: "13", label: "13. Intento de Detención Vehicular", level: 0 },
+        { id: "14", label: "14. Enfrentamientos Armados cerca de Lugares con RDE (Rol de Entorno) Gubernamental", level: 0 },
+        { id: "15", label: "15. Tiroteos en Vehículos", level: 0 },
+        { id: "16", label: "16. Prioridades y Procedimientos en Entornos Delictuales con Múltiples Sujetos y Vehículos", level: 0 },
+        { id: "17", label: "17. Para evitar confusiones y asegurar un desarrollo claro del rol, el entorno enviado debe ser lo más detallado posible, especificando", level: 0 },
+        { id: "18", label: "18. Negociaciones", level: 0 },
+        { id: "19", label: "19. Secuestros", level: 0 },
+        { id: "20", label: "20. Tipos de Secuestro", level: 0 },
+        { id: "20.1", label: "Secuestro para uso como rehén en un acto delictivo", level: 1 },
+        { id: "20.2", label: "Secuestro con otros fines (tortura, interrogatorio, etc.)", level: 1 },
+        { id: "20.3", label: "Secuestro de Oficiales", level: 1 },
+        { id: "21", label: "21. Reglas Generales", level: 0 }
       ]
     },
     // Future sections can be added here
@@ -79,9 +85,7 @@ export default function NormativaGeneral() {
         { id: "15.2", label: "Tipo de delitos permitidos", level: 1 },
         { id: "16.", label: "Zonas rojas y naranjas para civiles", level: 0 },
         { id: "17.", label: "Colaboración con Organizaciones Delictivas", level: 0 },
-        { id: "18.", label: "Consideraciones adicionales", level: 0 },
-
-
+        { id: "18.", label: "Consideraciones adicionales", level: 0 }
       ]
     },
     {
@@ -120,7 +124,7 @@ export default function NormativaGeneral() {
         { id: "6...", label: "Consideraciones adicionales", level: 0 },
         { id: "7...", label: "Se detallan ZONAS SEGURAS:", level: 0 }
       ]
-    },   
+    },
     {
       id: "zona-roja-naranja",
       title: "Zonas Rojas/Naranjas",
@@ -131,7 +135,6 @@ export default function NormativaGeneral() {
         { id: "3....", label: "Actos permitidos en Zonas Rojas y Naranjas ", level: 0 },
         { id: "4....", label: "Actos prohibidos en Zonas Rojas y Naranjas ", level: 0 },
         { id: "5....", label: "Consideraciones adicionales ", level: 0 }
-
       ]
     }
   ]
@@ -195,7 +198,7 @@ export default function NormativaGeneral() {
               <div className='w-full flex justify-start'>
                 <div className='bg-gray-200 p-4 rounded-lg'>
                   <p className='text-2xl text-orange-400 uppercase '>
-                    <b className='text-purple-600 '>Normativa</b> <span className="italic">Delictual</span>
+                    <b className='text-purple-600 '>Normativa</b> <span className='italic'>Delictual</span>
                   </p>
                 </div>
               </div>
@@ -237,13 +240,12 @@ export default function NormativaGeneral() {
 
           {/* Main Content */}
           <div className={`flex-1`}>
-          <div className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
-              {selectedSection === "normativa-general-delictual" && <NormativaDelictual/>}
+            <div className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
+              {selectedSection === "normativa-general-delictual" && <NormativaDelictual />}
               {selectedSection === "organizacion-delictivas" && <OrganizacionesDelictivas />}
               {selectedSection === "robos-a-sucursales" && <RobosSucursales />}
               {selectedSection === "zona-segura" && <ZonasSeguras />}
               {selectedSection === "zona-roja-naranja" && <ZonasRojas />}
-              
             </div>
           </div>
         </div>
