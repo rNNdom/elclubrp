@@ -110,7 +110,7 @@ export default function NormativaGeneral() {
     {
       id: "sanciones",
       title: "Sanciones",
-      icon: "🔨",
+      icon: "🚩",
       items: [
         { id: "Sanciones", label: "Sanciones", level: 0 },
         { id: "1", label: "1. Normativa de Sanciones", level: 0 },
@@ -196,7 +196,7 @@ export default function NormativaGeneral() {
                 Discord
               </a>
               <a
-                href='https://discord.gg/cgzSFSn9av'
+                href='https://www.tiktok.com/@elclubrp'
                 target='_blank'
                 className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all text-sm'
               >

@@ -30,7 +30,7 @@ export function Footer() {
             </Link>
 
             <Link
-              href='https://tiktok.com/@your-tiktok-handle'
+              href='https://www.tiktok.com/@elclubrp'
               target='_blank'
               rel='noopener noreferrer'
               className='relative bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-400 hover:to-purple-500 text-white px-8 py-3 rounded-full font-montserrat font-semibold text-sm uppercase tracking-wide transition-all duration-300 shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-400/60 transform hover:scale-105 border border-purple-400/30'
