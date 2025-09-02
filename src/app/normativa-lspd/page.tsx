@@ -1,17 +1,15 @@
 "use client"
 
-import { SubSectionContent, HeaderContent, SectionContent, Content, ListItemContent, ContentFooter } from "@/components/sections"
 import Sidebar from "@/components/Sidebar"
 import { MenuIcon, XIcon } from "lucide-react"
 import { useState } from "react"
-import NormativaLSPD from "./normativa-general-lspd"
-import Negociacionnes from "./negociaciones-lspd"
-import Investigacion from "./investigaciones"
-import CodigosLSPD from "./codigos-lspd"
 import AlertasDerechos from "./alertas-derechos"
+import CodigosLSPD from "./codigos-lspd"
+import Investigacion from "./investigaciones"
+import Negociacionnes from "./negociaciones-lspd"
+import NormativaLSPD from "./normativa-general-lspd"
 import ProcedimientosLSPD from "./procedimientos-operativos"
 import ReglasLSPD from "./reglas-lspd"
-
 
 export default function NormativaGeneral() {
   const [selectedOption, setSelectedOption] = useState(0)
@@ -25,54 +23,64 @@ export default function NormativaGeneral() {
       title: "Normativa General LSPD",
       icon: "🚨",
       items: [
-        { id: "1", label: "Estructura Jerárquica LSPD", level: 0 },
-        { id: "2", label: "Uso de Vehículos Policiales", level: 0 },
-        { id: "2.1", label: "Vehículos Permitidos", level: 1 },
-        { id: "2.2", label: "Restricciones y Condiciones de Uso ", level: 0 },
-        { id: "3", label: "Normativa General", level: 0 },
-        { id: "4", label: "Corrupción Policial", level: 0 },
-        { id: "5", label: "Profesionalismo y Conducta ", level: 0 },
-        { id: "6", label: "Respeto a la Autoridad", level: 0 },
-        { id: "7", label: "Relación con la Comunidad", level: 0 },
-        { id: "8", label: "Requisitos generales", level: 0 },
-        { id: "9", label: "Normativa de Ingreso y Ascensos - LSPD", level: 0 },
-        { id: "10", label: "Escalafón y Ascensos", level: 0 },
-        { id: "10.1", label: "Cadete → Oficial I", level: 1 },
-        { id: "10.2", label: "Oficial I → Oficial II ", level: 1 },
-        { id: "10.3", label: "Oficial II → Oficial III", level: 1 },
-        { id: "10.4", label: "Instructor", level: 1 },
-        { id: "10.5", label: "Detective", level: 1 },
-        { id: "10.6", label: "Sargento I → Sargento II", level: 1 },
-        { id: "10.7", label: "Teniente I → Teniente II", level: 1 },
-        { id: "10.8", label: "Capitán I → Capitán II", level: 1 },
-        { id: "10.9", label: "Comandante ", level: 1 },       
-        { id: "10.10", label: "Comisionado (Máxima Autoridad del LSPD)", level:  1},
-        { id: "11", label: "Artículos Importantes", level: 0 }
-
+        { id: "Concepto", label: "Introducción", level: 0 },
+        { id: "1", label: "1. Estructura Jerárquica LSPD", level: 0 },
+        { id: "1.1", label: "1.1 Rangos y funciones", level: 1 },
+        { id: "2", label: "2. Uso de Vehículos Policiales", level: 0 },
+        { id: "2.1", label: "2.1 Vehículos Permitidos", level: 1 },
+        { id: "2.2", label: "2.2 Restricciones y Condiciones de Uso", level: 1 },
+        { id: "3", label: "3. Normativa General", level: 0 },
+        { id: "4", label: "4. Corrupción Policial", level: 0 },
+        { id: "5", label: "4.1 Profesionalismo y Conducta", level: 1 },
+        { id: "6", label: "5. Respeto a la Autoridad", level: 0 },
+        { id: "6.1", label: "5.1 Principios fundamentales", level: 1 },
+        { id: "7", label: "6. Relación con la Comunidad", level: 0 },
+        { id: "7.1", label: "6.1 Directrices de comportamiento", level: 1 },
+        { id: "8", label: "7. Requisitos generales", level: 0 },
+        { id: "8.1", label: "7.1 Obligaciones básicas", level: 1 },
+        { id: "9", label: "8. Normativa de Ingreso y Ascensos - LSPD", level: 0 },
+        { id: "9.1", label: "8.1 Ingreso", level: 1 },
+        { id: "10", label: "9. Escalafón y Ascensos", level: 0 },
+        { id: "10.1", label: "9.1 Cadete → Oficial I", level: 1 },
+        { id: "10.2", label: "9.2 Oficial I → Oficial II", level: 1 },
+        { id: "10.3", label: "9.3 Oficial II → Oficial III", level: 1 },
+        { id: "10.4", label: "9.4 Instructor", level: 1 },
+        { id: "10.5", label: "9.5 Detective", level: 1 },
+        { id: "10.6", label: "9.6 Sargento I → Sargento II", level: 1 },
+        { id: "10.7", label: "9.7 Teniente I → Teniente II", level: 1 },
+        { id: "10.8", label: "9.8 Capitán I → Capitán II", level: 1 },
+        { id: "10.9", label: "9.9 Comandante", level: 1 },
+        { id: "10.10", label: "9.10 Comisionado (Máxima Autoridad del LSPD)", level: 1 },
+        { id: "11", label: "10. Artículos Importantes", level: 0 },
+        { id: "11.1", label: "10.1 Artículos fundamentales", level: 1 }
       ]
     },
     // Future sections can be added here
     {
       id: "procedimientos-lspd",
-      title: "Prodecimientos En Operativos",
+      title: "Procedimientos En Operativos",
       icon: "🚔",
       items: [
-        { id: "1", label: "Actuar en emergencias", level: 0 },
-        { id: "2", label: "Procedimiento de Detención", level: 0 },
-        { id: "2.1", label: "Detención de un sujeto no abatido:", level: 1 },
-        { id: "2.2", label: "Detención de un sujeto abatido:", level: 1 },
-        { id: "2.3", label: "Revisión de pertenencias:", level: 1 },
-        { id: "2.4", label: "Ingreso a la cárcel:", level: 1 },
-        { id: "3", label: "Uso De Fuerza", level: 0 },
-        { id: "4", label: "Arrestos", level: 0 },
-        { id: "5", label: "Persecuciones Vehiculares", level: 0 },
-        { id: "6", label: "Protocolo de Detención:", level: 0 },
-        { id: "6.1", label: "Avisos de Detención:", level: 1 },
-        { id: "6.2", label: "Maniobra PITT:", level: 1},
-        { id: "6.3", label: "Código Robert:", level: 1 },
-        { id: "6.4", label: "Disparar desde un Vehículo:", level: 1 },
-        { id: "6.5", label: "Comportamiento en el campo", level: 1 }
-
+        { id: "Concepto", label: "Introducción", level: 0 },
+        { id: "1", label: "1. Actuar en emergencias", level: 0 },
+        { id: "1.1", label: "1.1 Principios fundamentales", level: 1 },
+        { id: "2", label: "2. Procedimiento de Detención", level: 0 },
+        { id: "2.1", label: "2.1 Detención de un sujeto no abatido", level: 1 },
+        { id: "2.2", label: "2.2 Detención de un sujeto abatido", level: 1 },
+        { id: "2.3", label: "2.3 Revisión de pertenencias", level: 1 },
+        { id: "2.4", label: "2.4 Ingreso a la cárcel", level: 1 },
+        { id: "3", label: "3. Uso De Fuerza", level: 0 },
+        { id: "3.1", label: "3.1 Escalada de la fuerza", level: 1 },
+        { id: "4", label: "4. Arrestos", level: 0 },
+        { id: "4.1", label: "4.1 Procedimientos de arresto", level: 1 },
+        { id: "5", label: "5. Persecuciones Vehiculares", level: 0 },
+        { id: "5.1", label: "5.1 Autorizaciones Para Persecuciones", level: 1 },
+        { id: "6", label: "6. Protocolo de Detención", level: 0 },
+        { id: "6.1", label: "6.1 Avisos de Detención", level: 1 },
+        { id: "6.2", label: "6.2 Maniobra PITT", level: 1 },
+        { id: "6.3", label: "6.3 Código Robert", level: 1 },
+        { id: "6.4", label: "6.4 Disparar desde un Vehículo", level: 1 },
+        { id: "6.5", label: "6.5 Comportamiento en el campo", level: 1 }
       ]
     },
     {
@@ -82,7 +90,6 @@ export default function NormativaGeneral() {
       items: [
         { id: "1", label: "Reglas del cuerpo policial", level: 0 },
         { id: "2", label: "Uniformes y equipos", level: 0 }
-        
       ]
     },
     {
@@ -90,12 +97,15 @@ export default function NormativaGeneral() {
       title: "Negociaciones Policiales",
       icon: "⚖️",
       items: [
-
-        { id: "2", label: "Principios Generales:", level: 0 },
-        { id: "3", label: "Aspectos Negociables", level: 0 },
-        { id: "4", label: "Negociación de Huida Limpia", level: 0 },
-        { id: "5", label: "Uso de Rehenes y Consecuencias de su Abatimiento:", level: 0 }, 
-        { id: "6", label: "Ruptura de la Negociación", level: 0 }
+        { id: "Concepto", label: "Introducción", level: 0 },
+        { id: "2", label: "2. Principios Generales", level: 0 },
+        { id: "3", label: "3. Reglas sobre Entornos y Negociaciones en Robos", level: 0 },
+        { id: "3.1", label: "3.1 Aspectos Negociables", level: 1 },
+        { id: "4", label: "4. Negociación de Huida Limpia", level: 0 },
+        { id: "5", label: "5. Uso de Rehenes y Consecuencias de su Abatimiento", level: 0 },
+        { id: "6", label: "6. Ruptura de la Negociación", level: 0 },
+        { id: "6.1", label: "6.1 Causas de ruptura", level: 1 },
+        { id: "7", label: "7. Especificaciones de la Negociación", level: 0 }
       ]
     },
     {
@@ -103,16 +113,23 @@ export default function NormativaGeneral() {
       title: "Investigaciones",
       icon: "🕵️",
       items: [
-
-        { id: "2", label: "Evidencias e Informes", level: 0 },
-        { id: "3", label: "Investigaciones Policiales", level: 0 },
-        { id: "4", label: "Interrogatorios", level: 0 },
-        { id: "5", label: "Órdenes de Búsqueda y Captura", level: 0 }, 
-        { id: "6", label: "Allanamientos", level: 0 },
-        { id: "7", label: "CK Policial y Desmantelamiento de Organizaciones", level: 0 },
-        { id: "8", label: "CK Policial (Muerte de personaje por rol de fuerza mayor)", level: 1 },
-        { id: "9", label: "Desmantelamiento de Organizaciones Criminales", level: 1 },
-        { id: "10", label: "Consideraciones Finales", level: 0 }
+        { id: "Concepto", label: "Introducción", level: 0 },
+        { id: "2", label: "2. Evidencias e Informes", level: 0 },
+        { id: "2.1", label: "2.1 Procedimientos básicos", level: 1 },
+        { id: "2.2", label: "2.2 Elementos requeridos en la denuncia", level: 1 },
+        { id: "3", label: "3. Investigaciones Policiales", level: 0 },
+        { id: "3.1", label: "3.1 Requisitos para iniciar una investigación", level: 1 },
+        { id: "4", label: "4. Interrogatorios", level: 0 },
+        { id: "4.1", label: "4.1 Documento de autorización", level: 1 },
+        { id: "5", label: "5. Órdenes de Búsqueda y Captura", level: 0 },
+        { id: "5.1", label: "5.1 Criterios para emitir una orden", level: 1 },
+        { id: "6", label: "6. Allanamientos", level: 0 },
+        { id: "6.1", label: "6.1 Informe requerido para solicitar un allanamiento", level: 1 },
+        { id: "7", label: "7. CK Policial y Desmantelamiento de Organizaciones", level: 0 },
+        { id: "7.1", label: "7.1 CK Policial (Muerte de personaje por rol de fuerza mayor)", level: 1 },
+        { id: "7.2", label: "7.2 Desmantelamiento de Organizaciones Criminales", level: 1 },
+        { id: "8", label: "8. Consideraciones Finales", level: 0 },
+        { id: "8.1", label: "8.1 Principios fundamentales", level: 1 }
       ]
     },
     {
@@ -124,7 +141,6 @@ export default function NormativaGeneral() {
         { id: "3", label: "Códigos Radiales", level: 0 },
         { id: "4", label: "Códigos Penales", level: 0 },
         { id: "5", label: "Otros Códigos", level: 0 }
-
       ]
     },
     {
@@ -139,7 +155,7 @@ export default function NormativaGeneral() {
         { id: "5", label: "Derechos Miranda", level: 0 },
         { id: "6", label: "Leer Derechos Miranda", level: 0 }
       ]
-    },
+    }
   ]
 
   const handleGoTo = (id: string, itemIdx: number) => {
@@ -201,7 +217,7 @@ export default function NormativaGeneral() {
               <div className='w-full flex justify-start'>
                 <div className='bg-gray-200 p-4 rounded-lg'>
                   <p className='text-2xl text-orange-400 uppercase '>
-                    <b className='text-purple-600 '>Normativa</b> <span className="italic">LSPD</span>
+                    <b className='text-purple-600 '>Normativa</b> <span className='italic'>LSPD</span>
                   </p>
                 </div>
               </div>
@@ -243,14 +259,14 @@ export default function NormativaGeneral() {
 
           {/* Main Content */}
           <div className={`flex-1`}>
-          <div className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
-              {selectedSection === "normativa-general-lspd" && < NormativaLSPD/>}
-              {selectedSection === "procedimientos-lspd" && < ProcedimientosLSPD/>}
-              {selectedSection === "reglas-lspd" && < ReglasLSPD/>}
-              {selectedSection === "negociaciones-lspd" && < Negociacionnes/>}
-              {selectedSection === "investigaciones" && < Investigacion/>}
-              {selectedSection === "codigos-lspd" && < CodigosLSPD/>}
-              {selectedSection === "alertas-derechos" && < AlertasDerechos/>}
+            <div className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
+              {selectedSection === "normativa-general-lspd" && <NormativaLSPD />}
+              {selectedSection === "procedimientos-lspd" && <ProcedimientosLSPD />}
+              {selectedSection === "reglas-lspd" && <ReglasLSPD />}
+              {selectedSection === "negociaciones-lspd" && <Negociacionnes />}
+              {selectedSection === "investigaciones" && <Investigacion />}
+              {selectedSection === "codigos-lspd" && <CodigosLSPD />}
+              {selectedSection === "alertas-derechos" && <AlertasDerechos />}
             </div>
           </div>
         </div>
