@@ -153,9 +153,17 @@ function NormativaDelictual() {
             </HeaderContent>
           </SubSectionContent>
         </SectionContent>
+        <SectionContent reference='Vehículos Modificados'>
+          <SubSectionContent reference='Vehículos Modificados'>
+            <HeaderContent title='5. Vehículos Modificados' id='vehi-mod'>
+              Queda prohibido el uso de Nitro, blindaje en carrocería y blindaje en ruedas en los vehículos; si un vehículo es sorprendido con alguna de estas modificaciones y se da a la fuga, se
+              colocará en búsqueda por su patente, y en caso de detención, se aplicará una multa y el vehículo será llevado al mecánico para retirar la modificación.
+            </HeaderContent>
+          </SubSectionContent>
+        </SectionContent>
         <SectionContent reference='Búsqueda de Vehículos'>
           <SubSectionContent reference='Búsqueda de Vehículos'>
-            <HeaderContent title='5. Búsqueda de Vehículos' id='5'>
+            <HeaderContent title='6. Búsqueda de Vehículos' id='6'>
               En caso de un rol delictivo donde la policía pierda de vista al perseguido, la búsqueda del vehículo podrá prolongarse por un máximo de 15 minutos. La persona involucrada no podrá
               cambiar de vehículo o guardarlo sin enviar el entorno correspondiente de cambio de vehículo o abandono del mismo. Del mismo modo, si se envía un entorno con la descripción del vehículo,
               la búsqueda se llevará a cabo por el mismo periodo de tiempo.
@@ -164,33 +172,36 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Búsqueda de Sujetos'>
           <SubSectionContent reference='Búsqueda de Sujetos'>
-            <HeaderContent title='6. Búsqueda de Sujetos' id='6'>
+            <HeaderContent title='7. Búsqueda de Sujetos' id='6'>
               En caso de un rol delictivo donde los sospechosos logren escapar y sean perdidos de vista, la búsqueda deberá realizarse por un máximo de 15 minutos. Si durante un enfrentamiento varios
               delincuentes son abatidos, pero aún quedan uno o dos en la escena, estos tendrán un plazo de 10 minutos para manifestar su presencia, ya sea siendo vistos o realizando disparos. Si
               transcurrido este tiempo no hay indicios de su continuidad en el rol, se podrá proceder con el procesamiento de los compañeros abatidos.
             </HeaderContent>
           </SubSectionContent>
         </SectionContent>
-        <SectionContent reference='Límite de Velocidad en Ciudad y Actos'>
-          <SubSectionContent reference='Límite de Velocidad en Ciudad y Actos'>
-            <HeaderContent title='7. Límite de Velocidad en Ciudad y Actos' id='7'>
+        <SectionContent reference='Límite de Velocidad en Ciudad'>
+          <SubSectionContent reference='Límite de Velocidad en Ciudad'>
+            <HeaderContent title='8. Límite de Velocidad en Ciudad' id='7'>
               Las velocidades máximas permitidas varían según la zona para mantener el realismo y la seguridad en el roleplay delictual.
             </HeaderContent>
 
             <Content title='Velocidades Permitidas' id='7.1' spaced>
               <ListItemContent
                 items={[
-                  "Zona urbana central (rectángulo azul en el mapa): Máximo 100 km/h (incluye comisaría, hospital, municipalidad y talleres mecánicos). Resto de la ciudad: Máximo 150 km/h",
-                  "Carreteras principales (marcadas en amarillo en el mapa): Máximo 250 km/h",
-                  "Zonas urbanas en el norte (Paleto y Sandy Shores): Máximo 150 km/h"
+                  "Zona urbana central (rectángulo azul en el mapa): Máximo 120 km/h (incluye comisaría, hospital, municipalidad y talleres mecánicos). Resto de la ciudad: Máximo 170 km/h",
+                  "Carreteras principales (marcadas en amarillo en el mapa): Máximo 300 km/h",
+                  "Zonas urbanas en el norte (Paleto y Sandy Shores): Máximo 180 km/h"
                 ]}
               />
             </Content>
+            <div className='my-6 flex justify-center'>
+              <Image src={"/mapa.avif"} alt={"Mapa de velocidades"} width={900} height={900} className='rounded-lg shadow-lg' />
+            </div>
           </SubSectionContent>
         </SectionContent>
         <SectionContent reference='Control y Fiscalización'>
           <SubSectionContent reference='Control y Fiscalización'>
-            <HeaderContent title='8. Control y Fiscalización' id='8'>
+            <HeaderContent title='9. Control y Fiscalización' id='8'>
               La policía podrá fiscalizar vehículos que excedan estos límites y utilizar radares para identificar vehículos.
               <br />
               <br />
@@ -200,7 +211,7 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Reglas en Actos Delictuales'>
           <SubSectionContent reference='Reglas en Actos Delictuales'>
-            <HeaderContent title='9. Reglas en Actos Delictuales' id='9'>
+            <HeaderContent title='10. Reglas en Actos Delictuales' id='9'>
               La velocidad máxima permitida en situaciones delictivas es de 250 km/h, con un margen de error de hasta 10 km/h debido a variaciones por saltos.
               <br />
               <br />
@@ -213,9 +224,8 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Persecuciones y Cruce de Frontera'>
           <SubSectionContent reference='Persecuciones y Cruce de Frontera'>
-            <HeaderContent title='10. Persecuciones y Cruce de Frontera' id='10'>
-              Si un rol se inicia en una zona y, durante la persecución, el delincuente cruza la frontera bloqueada, la policía del territorio al que ingresa podrá acudir en apoyo a la persecución sin
-              considerar la regla del +1.
+            <HeaderContent title='11. Persecuciones y Cruce de Frontera' id='10'>
+              Si un rol se inicia en una zona y, durante la persecución, el delincuente cruza la frontera bloqueada, la policía podrá solicitar apoyo de 2 oficiales adicionales.
             </HeaderContent>
 
             <Content title='Condiciones de la Intervención Policial en caso de cruzar Frontera' id='10.1' spaced>
@@ -230,19 +240,23 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Medios de Cruce Alternativos'>
           <SubSectionContent reference='Medios de Cruce Alternativos'>
-            <HeaderContent title='11. Medios de Cruce Alternativos' id='11'>
+            <HeaderContent title='12. Medios de Cruce Alternativos' id='11'>
               Si el cruce de frontera se realiza por medios distintos (aéreos, acuáticos u otros que no impliquen atravesar una frontera bloqueada), los delincuentes deberán enviar un entorno. En este
-              caso, la cantidad de efectivos policiales que se sumen al rol deberá ser igual a la cantidad de oficiales que ya estaban en persecución.
+              caso, la policia podra solicitar las unidades que sean necesarias para terminar la persecución.
             </HeaderContent>
 
             <Content title='' id='11.1' spaced>
-              <ListItemContent title='Ejemplo' description='Si la persecución inició con 4 oficiales del Sheriff, al cruzar la frontera podrán sumarse 4 oficiales de la LSPD.' />
+              <ListItemContent
+                title='Ejemplo'
+                description='  Si la persecución inició con 4 oficiales de la LSPD, al cruzar la frontera podrán sumarse 2 
+            oficiales de la LSPD extras.'
+              />
             </Content>
           </SubSectionContent>
         </SectionContent>
         <SectionContent reference='Uso de Vestimenta y Fiscalización Policial'>
           <SubSectionContent reference='Uso de Vestimenta y Fiscalización Policial'>
-            <HeaderContent title='12. Uso de Vestimenta y Fiscalización Policial' id='12'>
+            <HeaderContent title='13. Uso de Vestimenta y Fiscalización Policial' id='12'>
               Como se indica en la normativa sobre vestimenta, el uso de cascos y chalecos antibalas presume una intención delictiva y solo está permitido en ciertos lugares. Por lo tanto, llevar
               estos elementos en la ciudad dará lugar a una fiscalización policial completa.
               <br />
@@ -254,7 +268,7 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Intento de Detención Vehicular con Fines Delictuales'>
           <SubSectionContent reference='Intento de Detención Vehicular con Fines Delictuales'>
-            <HeaderContent title='13. Intento de Detención Vehicular con Fines Delictuales' id='13'>
+            <HeaderContent title='14. Intento de Detención Vehicular con Fines Delictuales' id='13'>
               En caso de que un sujeto intente detener un vehículo con fines delictivos (robo o secuestro), el simple hecho de decir "párate" o "detente" no es una amenaza suficiente para obligar la
               detención.
             </HeaderContent>
@@ -272,7 +286,7 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Enfrentamientos Armados cerca de Lugares con RDE'>
           <SubSectionContent reference='Enfrentamientos Armados cerca de Lugares con RDE'>
-            <HeaderContent title='14. Enfrentamientos Armados cerca de Lugares con RDE (Rol de Entorno) Gubernamental' id='14'>
+            <HeaderContent title='15. Enfrentamientos Armados cerca de Lugares con RDE (Rol de Entorno) Gubernamental' id='14'>
               En caso de un enfrentamiento armado cerca de lugares que cuenten con RDE gubernamental (es decir, zonas con seguridad establecida), se deja claro que esto faculta a la policía a terminar
               el conflicto sin considerar la igualdad numérica de las organizaciones involucradas.
             </HeaderContent>
@@ -294,7 +308,7 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Tiroteos en Vehículos'>
           <SubSectionContent reference='Tiroteos en Vehículos'>
-            <HeaderContent title='15. Tiroteos en Vehículos' id='15'>
+            <HeaderContent title='16. Tiroteos en Vehículos' id='15'>
               Reglas específicas para el desarrollo de tiroteos que involucren vehículos en movimiento o estacionados.
             </HeaderContent>
 
@@ -322,7 +336,7 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Prioridades y Procedimientos en Entornos Delictuales'>
           <SubSectionContent reference='Prioridades y Procedimientos en Entornos Delictuales'>
-            <HeaderContent title='16. Prioridades y Procedimientos en Entornos Delictuales con Múltiples Sujetos y Vehículos' id='16'>
+            <HeaderContent title='17. Prioridades y Procedimientos en Entornos Delictuales con Múltiples Sujetos y Vehículos' id='16'>
               En situaciones donde un entorno delictual involucre múltiples sujetos en distintas ubicaciones y vehículos (ejemplo: robo con huida y cómplices externos bloqueando calles), se deberán
               seguir las siguientes prioridades y reglas:
             </HeaderContent>
@@ -339,7 +353,7 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Especificaciones del Entorno Detallado'>
           <SubSectionContent reference='Especificaciones del Entorno Detallado'>
-            <HeaderContent title='17. Especificaciones del Entorno Detallado' id='17'>
+            <HeaderContent title='18. Especificaciones del Entorno Detallado' id='17'>
               Para evitar confusiones y asegurar un desarrollo claro del rol, el entorno enviado debe ser lo más detallado posible, especificando todos los elementos relevantes de la situación
               delictiva.
             </HeaderContent>
@@ -368,7 +382,7 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Negociaciones'>
           <SubSectionContent reference='Negociaciones'>
-            <HeaderContent title='18. Negociaciones' id='18'>
+            <HeaderContent title='19. Negociaciones' id='18'>
               Una vez realizada la negociación con la LSPD/LSSD, se respetará el acuerdo siempre que no se incurra en una falta que lo invalide. La policía deberá emitir avisos antes de tomar medidas
               drásticas de detención, como el uso de pinchos, la maniobra PIT o el código Robert.
               <br />
@@ -381,7 +395,7 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Secuestros'>
           <SubSectionContent reference='Secuestros'>
-            <HeaderContent title='19. Secuestros' id='19'>
+            <HeaderContent title='20. Secuestros' id='19'>
               Los secuestros son actividades delictivas que requieren un desarrollo cuidadoso y el cumplimiento de requisitos específicos de disponibilidad según el tipo de objetivo.
             </HeaderContent>
 
@@ -404,7 +418,7 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Tipos de Secuestro'>
           <SubSectionContent reference='Tipos de Secuestro'>
-            <HeaderContent title='20. Tipos de Secuestro' id='20'>
+            <HeaderContent title='21. Tipos de Secuestro' id='20'>
               Existen diferentes tipos de secuestro según su propósito y desarrollo dentro del roleplay, cada uno con sus propias reglas y limitaciones específicas.
             </HeaderContent>
 
@@ -442,7 +456,7 @@ function NormativaDelictual() {
         </SectionContent>
         <SectionContent reference='Reglas Generales'>
           <SubSectionContent reference='Reglas Generales'>
-            <HeaderContent title='21. Reglas Generales' id='21'>
+            <HeaderContent title='22. Reglas Generales' id='21'>
               Reglas adicionales que se aplican a todos los tipos de secuestro dentro del servidor.
             </HeaderContent>
 
