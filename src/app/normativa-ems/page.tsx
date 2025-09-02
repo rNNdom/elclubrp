@@ -1,13 +1,11 @@
 "use client"
 
-import { SubSectionContent, HeaderContent, SectionContent, Content, ListItemContent, ContentFooter } from "@/components/sections"
 import Sidebar from "@/components/Sidebar"
 import { MenuIcon, XIcon } from "lucide-react"
 import { useState } from "react"
 import NormativaEMS from "./normativa-general-ems"
 import Procedimientos from "./procedimientos"
 import ReglasEMS from "./reglas-ems"
-
 
 export default function NormativaGeneral() {
   const [selectedOption, setSelectedOption] = useState(0)
@@ -21,25 +19,33 @@ export default function NormativaGeneral() {
       title: "Normativa General EMS",
       icon: "🧑‍⚕️",
       items: [
-        { id: "1", label: "Atenciones igualitarias", level: 0 },
-        { id: "2", label: "Uniforme de servicio", level: 0 },
-        { id: "3", label: "Corrupcion y Vinculacion con ODs", level: 0 },
-        { id: "4", label: "Abuso de corrupción y servicio a la comunidad", level: 0 },
-        { id: "5", label: "Uso de Máscaras", level: 0 },
-        { id: "6", label: "Estados Del Paciente:", level: 0 }
-      
+        { id: "Concepto", label: "Introducción", level: 0 },
+        { id: "1", label: "1. Atenciones igualitarias", level: 0 },
+        { id: "2", label: "2. Uniforme de servicio", level: 0 },
+        { id: "3", label: "3. Corrupción y Vinculación a ODs", level: 0 },
+        { id: "3.1", label: "3.1 Restricciones y prohibiciones", level: 1 },
+        { id: "3.2", label: "3.2 Corrupción permitida", level: 1 },
+        { id: "4", label: "4. Abuso de corrupción y servicio a la comunidad", level: 0 },
+        { id: "5", label: "5. Uso de Máscaras", level: 0 },
+        { id: "5.1", label: "5.1 Protocolo en situaciones específicas", level: 1 }
       ]
     },
     // Future sections can be added here
     {
       id: "procedimientos",
-      title: "Prodecimientos",
+      title: "Procedimientos",
       icon: "💊",
-      items: [       
-        { id: "1.", label: "Uso de Vehículos", level: 0 },
-        { id: "2.", label: "Uso de Radio IC", level: 0 },
-        { id: "3.", label: "Uso de Sirenas", level: 0 },
-        { id: "4.", label: "Procedimientos en Llamados por Tiroteos", level: 0 }]
+      items: [
+        { id: "Concepto", label: "Introducción", level: 0 },
+        { id: "1", label: "1. Uso de Vehículos", level: 0 },
+        { id: "2", label: "2. Uso de Radio IC", level: 0 },
+        { id: "3", label: "3. Uso de Sirenas", level: 0 },
+        { id: "3.1", label: "3.1 Casos permitidos", level: 1 },
+        { id: "4", label: "4. Procedimientos en Llamados por Tiroteos", level: 0 },
+        { id: "4.1", label: "4.1 Verificación de zona segura", level: 1 },
+        { id: "4.2", label: "4.2 Zona urbana", level: 1 },
+        { id: "4.3", label: "4.3 Zona norte o lugares alejados", level: 1 }
+      ]
     },
     {
       id: "reglas-ems",
@@ -49,8 +55,6 @@ export default function NormativaGeneral() {
         { id: "1..", label: "Notificaciones por Ausencias", level: 0 },
         { id: "2..", label: "Reingreso de Ex-EMS", level: 0 }
       ]
-
-      
     }
   ]
 
@@ -113,7 +117,7 @@ export default function NormativaGeneral() {
               <div className='w-full flex justify-start'>
                 <div className='bg-gray-200 p-4 rounded-lg'>
                   <p className='text-2xl text-orange-400 uppercase '>
-                    <b className='text-purple-600 '>Normativa</b> <span className="italic">EMS</span>
+                    <b className='text-purple-600 '>Normativa</b> <span className='italic'>EMS</span>
                   </p>
                 </div>
               </div>
@@ -155,11 +159,10 @@ export default function NormativaGeneral() {
 
           {/* Main Content */}
           <div className={`flex-1`}>
-          <div className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
-              {selectedSection === "normativa-general-ems" && < NormativaEMS/>}
-              {selectedSection === "procedimientos" && < Procedimientos/>}
-              {selectedSection === "reglas-ems" && < ReglasEMS/>}
-              
+            <div className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
+              {selectedSection === "normativa-general-ems" && <NormativaEMS />}
+              {selectedSection === "procedimientos" && <Procedimientos />}
+              {selectedSection === "reglas-ems" && <ReglasEMS />}
             </div>
           </div>
         </div>
