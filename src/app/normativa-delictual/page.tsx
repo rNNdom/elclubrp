@@ -62,68 +62,67 @@ export default function NormativaGeneral() {
       title: "Organizaciones Delictivas",
       icon: "🏯",
       items: [
-        { id: "2.", label: "Niveles De OD's", level: 0 },
-        { id: "3.", label: "Organización Delictiva Administrativa", level: 0 },
-        { id: "4.", label: "Alianzas entre Organizaciones Delictivas", level: 0 },
-        { id: "5.", label: "Normativa sobre Infiltración y Suplantación de Organizaciones Delictivas", level: 0 },
-        { id: "6.", label: "Infiltración en una Organización Delictiva", level: 0 },
-        { id: "7.", label: "Suplantación de una Organización Delictiva", level: 0 },
-        { id: "8.", label: "Consideraciones Generales", level: 0 },
-        { id: "9.", label: "Normativa CK en Organizaciones Delictuales", level: 0 },
-        { id: "10.", label: "Motivos Válidos IC", level: 0 },
-        { id: "10.1", label: "Ejemplos de motivos aceptados:", level: 1 },
-        { id: "11.", label: "Procedimiento Administrativo", level: 0 },
-        { id: "12.", label: "Requisitos para la Solicitud", level: 0 },
-        { id: "12.1", label: "El solicitante deberá presentar la mayor cantidad de información posible para respaldar la petición. Entre los requisitos indispensables se encuentran:", level: 1 },
-        { id: "13.", label: "Ejecución del CK", level: 0 },
-        { id: "13.1", label: "Consideraciones Adicionales", level: 1 },
-        { id: "14.", label: "Tipos De Calibre", level: 0 },
-        { id: "14.1", label: "Calibres Bajo:", level: 1 },
-        { id: "14.2", label: "Calibres Medio:", level: 1 },
-        { id: "14.3", label: "Calibres Altos:", level: 1 },
-        { id: "15.", label: "Actos Ilegales de Civiles", level: 0 },
-        { id: "15.1", label: "Cantidad de participantes", level: 1 },
-        { id: "15.2", label: "Tipo de delitos permitidos", level: 1 },
-        { id: "16.", label: "Zonas rojas y naranjas para civiles", level: 0 },
-        { id: "17.", label: "Colaboración con Organizaciones Delictivas", level: 0 },
-        { id: "18.", label: "Consideraciones adicionales", level: 0 }
+        { id: "Concepto", label: "1. Organizaciones delictuales", level: 0 },
+        { id: "2.", label: "2. Niveles De OD's", level: 0 },
+        { id: "3.", label: "3. Organización Delictiva Administrativa", level: 0 },
+        { id: "4.", label: "4. Alianzas entre Organizaciones Delictivas", level: 0 },
+        { id: "5.", label: "5. Normativa sobre Infiltración y Suplantación de Organizaciones Delictivas", level: 0 },
+        { id: "6.", label: "6. Infiltración en una Organización Delictiva", level: 0 },
+        { id: "7.", label: "7. Suplantación de una Organización Delictiva", level: 0 },
+        { id: "8.", label: "8. Consideraciones Generales", level: 0 },
+        { id: "9.", label: "9. Normativa CK en Organizaciones Delictuales", level: 0 },
+        { id: "10.", label: "10. Motivos Válidos IC", level: 0 },
+        { id: "10.1", label: "10.1 Ejemplos de motivos aceptados:", level: 1 },
+        { id: "11.", label: "11. Procedimiento Administrativo", level: 0 },
+        { id: "12.", label: "12. Requisitos para la Solicitud", level: 0 },
+        { id: "12.1", label: "12.1 Requisitos indispensables", level: 1 },
+        { id: "13.", label: "13. Ejecución del CK", level: 0 },
+        { id: "13.1", label: "13.1 Procedimiento post-ejecución", level: 1 },
+        { id: "14.", label: "14. Tipos De Calibre", level: 0 },
+        { id: "14.1", label: "14.1 Calibres Bajo", level: 1 },
+        { id: "14.2", label: "14.2 Calibres Medio", level: 1 },
+        { id: "14.3", label: "14.3 Calibres Altos", level: 1 },
+        { id: "15.", label: "15. Actos Ilegales de Civiles", level: 0 },
+        { id: "15.1", label: "15.1 Cantidad de participantes", level: 1 },
+        { id: "15.2", label: "15.2 Tipo de delitos permitidos", level: 1 },
+        { id: "16.", label: "16. Zonas rojas y naranjas para civiles", level: 0 },
+        { id: "17.", label: "17. Colaboración con Organizaciones Delictivas", level: 0 },
+        { id: "18.", label: "18. Consideraciones adicionales", level: 0 }
       ]
     },
     {
       id: "robos-a-sucursales",
-      title: "Robos A Sucusales",
+      title: "Robos A Sucursales",
       icon: "💵",
       items: [
-        { id: "2..", label: "Disponibilidad De LSPD", level: 0 },
-        { id: "3..", label: "Rol en curso con baja conectividad:", level: 0 },
-        { id: "4..", label: "Robos", level: 0 },
-        { id: "4..1", label: "Información", level: 1 },
-        { id: "5..", label: "Cantidad de Involucrados y Calibre para Robos", level: 0 },
-        { id: "5..1", label: "Badulaque", level: 1 },
-        { id: "5..2", label: "Fleecas", level: 1 },
-        { id: "5..3", label: "Joyería", level: 1 },
-        { id: "5..4", label: "Banco Paleto", level: 1 },
-        { id: "5..5", label: "Life Invader", level: 1 },
-        { id: "5..6", label: "Maze Bank", level: 1 },
-        { id: "5..7", label: "Humane", level: 1 },
-        { id: "5..8", label: "Banco Central", level: 1 },
-        { id: "5..9", label: "Reserva Nacional De Oro", level: 1 },
-        { id: "6..", label: "Normas Generales sobre el Armamento en Robos", level: 1 },
-        { id: "6..1", label: "Tomar En Consideración", level: 0 }
+        { id: "Concepto", label: "1. Introducción", level: 0 },
+        { id: "2.", label: "2. Disponibilidad De LSPD", level: 0 },
+        { id: "3.", label: "3. Rol en curso con baja conectividad", level: 0 },
+        { id: "4.", label: "4. Robos", level: 0 },
+        { id: "4.1", label: "4.1 Información importante", level: 1 },
+        { id: "5.", label: "5. Cantidad de Involucrados y Calibre para Robos", level: 0 },
+        { id: "5.1", label: "5.1 Robo De Baja Prioridad", level: 1 },
+        { id: "5.2", label: "5.2 Robo De Media Prioridad", level: 1 },
+        { id: "5.3", label: "5.3 Robo De Alta Prioridad", level: 1 },
+        { id: "6.", label: "6. Normas Generales sobre el Armamento en Robos", level: 0 },
+        { id: "6.1", label: "6.1 Tomar En Consideración", level: 1 }
       ]
     },
     {
-      id: "zona-segura",
-      title: "Zonas Segura",
+      id: "zonas-seguras",
+      title: "Zonas Seguras",
       icon: "🛡️",
       items: [
-        { id: "1...", label: "Queda completamente prohibido roles agresivos dentro de ellas, tales como: ", level: 0 },
-        { id: "2...", label: "Consideraciones adicionales", level: 0 },
-        { id: "3...", label: "Discusiones, riñas y peleas sin armas", level: 0 },
-        { id: "4...", label: "Secuestros o asaltos fuera de zonas seguras ", level: 0 },
-        { id: "5...", label: "Continuación de roles agresivos dentro de Zonas Seguras", level: 0 },
-        { id: "6...", label: "Consideraciones adicionales", level: 0 },
-        { id: "7...", label: "Se detallan ZONAS SEGURAS:", level: 0 }
+        { id: "Concepto", label: "1. Introducción", level: 0 },
+        { id: "1.", label: "1. Reglamento de Zonas Seguras", level: 0 },
+        { id: "1.1", label: "1.1 Roles agresivos prohibidos", level: 1 },
+        { id: "2.", label: "2. Roles semi-agresivos permitidos", level: 0 },
+        { id: "2.1", label: "2.1 Discusiones y peleas sin armas", level: 1 },
+        { id: "3.", label: "3. Secuestros o asaltos fuera de zonas seguras", level: 0 },
+        { id: "4.", label: "4. Continuación de roles agresivos", level: 0 },
+        { id: "5.", label: "5. Consideraciones adicionales", level: 0 },
+        { id: "6.", label: "6. Zonas Seguras específicas", level: 0 },
+        { id: "6.1", label: "6.1 Ubicaciones protegidas", level: 1 }
       ]
     },
     {
@@ -131,11 +130,15 @@ export default function NormativaGeneral() {
       title: "Zonas Rojas/Naranjas",
       icon: "💀",
       items: [
-        { id: "1....", label: "Zona Roja", level: 0 },
-        { id: "2....", label: "Zona Naranja", level: 0 },
-        { id: "3....", label: "Actos permitidos en Zonas Rojas y Naranjas ", level: 0 },
-        { id: "4....", label: "Actos prohibidos en Zonas Rojas y Naranjas ", level: 0 },
-        { id: "5....", label: "Consideraciones adicionales ", level: 0 }
+        { id: "Concepto", label: "1. Introducción", level: 0 },
+        { id: "1.", label: "1. Diferencias entre Zonas Rojas y Zonas Naranjas", level: 0 },
+        { id: "1.1", label: "1.1 Zona Roja", level: 1 },
+        { id: "1.2", label: "1.2 Zona Naranja", level: 1 },
+        { id: "2.", label: "2. Actos permitidos en Zonas Rojas y Naranjas", level: 0 },
+        { id: "2.1", label: "2.1 Acciones autorizadas", level: 1 },
+        { id: "3.", label: "3. Actos prohibidos en Zonas Rojas y Naranjas", level: 0 },
+        { id: "3.1", label: "3.1 Restricciones", level: 1 },
+        { id: "4.", label: "4. Consideraciones adicionales", level: 0 }
       ]
     }
   ]
@@ -245,7 +248,7 @@ export default function NormativaGeneral() {
               {selectedSection === "normativa-general-delictual" && <NormativaDelictual />}
               {selectedSection === "organizacion-delictivas" && <OrganizacionesDelictivas />}
               {selectedSection === "robos-a-sucursales" && <RobosSucursales />}
-              {selectedSection === "zona-segura" && <ZonasSeguras />}
+              {selectedSection === "zonas-seguras" && <ZonasSeguras />}
               {selectedSection === "zona-roja-naranja" && <ZonasRojas />}
             </div>
           </div>
